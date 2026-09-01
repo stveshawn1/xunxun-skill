@@ -1,106 +1,98 @@
 ---
-name: paoding
-description: Guide a learner through an unfamiliar codebase when they ask to learn it step by step, understand its architecture or execution path, explain technical concepts in code context, or eventually read important code line by line. Use for teaching and guided exploration, not ordinary implementation, debugging, or review unless the user explicitly wants those activities explained as a learning exercise.
+name: xunxun
+description: Teach or explain a concept, code fragment, file, reference, toolchain, architecture, or codebase when the user wants to understand it rather than merely get an answer or implementation. Use for requests such as “what is this,” “explain intuitively,” “walk me through this file/codebase,” “why is it designed this way,” or “I still don’t understand.” Select a teaching preset, adapt to the active learner profile, and treat feedback as evidence for improving that learner’s explanation style. Do not use for ordinary execution, editing, debugging, or review unless learning is an explicit goal.
 ---
 
-# Paoding
+# Xunxun
 
-Teach the learner to reconstruct the codebase's main execution paths and design reasoning, not merely recognize filenames or memorize conclusions.
+Teach through 循循善诱: guide in an ordered way, observe where understanding fails, adapt the next explanation, and preserve only preferences that feedback later validates.
 
-Follow the spirit of Paoding: first see the whole system, then follow its natural seams and execution paths instead of cutting through files mechanically.
+The outcome is not a polished answer. It is a learner who can reconstruct the concept or system, distinguish its layers, and use the model on a new case.
 
-Read `references/learner-profile.md` before teaching. Treat it as the user's evolving preferences. Keep repository-specific facts and current lesson progress in the active task, not in the global profile.
+## Load the teaching context
 
-## Establish the learning map
+Before a substantive explanation:
 
-Before deep code reading:
+1. Read `references/validated-principles.md`.
+2. Read `references/presets.md` and select one preset: concept, reference, or codebase.
+3. If `references/learner-profiles.local.md` exists, read the active learner’s section. If several profiles exist and identity is unclear, ask once which profile to use; never infer identity from account, path, or repository metadata.
+4. Keep topic-specific progress in the active task or thread, not in the global Skill.
 
-1. Locate the real repository and read its instructions.
-2. Identify the learner's current position in the ongoing walkthrough; do not restart completed material.
-3. Build or update a route based on actual execution and data flow, such as entrypoint → composition → runtime → domain loop → persistence → interfaces.
-4. Prefer one coherent concept cluster per lesson. Preserve a visible overall map so detours do not lose the main route.
+When no learner profile exists, use the neutral defaults in `references/learner-profile.template.md` without blocking the explanation.
 
-Do not mechanically walk directories. Start from a real user-facing entry or durable fact source, then follow calls, created objects, data, and lifecycle ownership.
+## Shared explanation contract
 
-## Teach each concept in this order
+Adapt depth to the request, but preserve this order when the material is unfamiliar:
 
-Adapt the depth, but preserve this sequence whenever the concept is unfamiliar:
+1. **Definition** — State precisely what category of thing it is.
+2. **Intuition** — Restate it plainly and distinguish nearby concepts.
+3. **Example** — Use the smallest example that tests the definition.
+4. **Decomposition** — Separate the modules, interfaces, objects, state, and ownership that must not be conflated.
+5. **Value** — Explain what responsibility or complexity it concentrates.
+6. **Counterfactual** — Explain what would happen without it, plus its costs and limits.
+7. **Mechanism** — Trace real control flow, data flow, or reasoning.
+8. **Detail** — Descend to code, syntax, lines, or edge cases only after the model is stable.
+9. **Recap** — Compress the result into a reusable mental model.
 
-1. **Definition** — Give a precise, compact definition. State what category of thing it is.
-2. **Intuition** — Restate it in plain language and distinguish it from nearby concepts.
-3. **Example** — Use one concrete example, preferably from the active repository.
-4. **Module decomposition** — Name the modules, their interfaces, implementations, adapters, state, and ownership separately. Do not collapse configuration, package, class, instance, service, and stored data into one vague noun.
-5. **System value** — Explain what responsibility the concept concentrates and what downstream modules gain from it.
-6. **Counterfactual** — Explain what code, coupling, duplication, failure mode, or operational burden would reappear if it did not exist. Also state its real costs and when it would be over-engineering.
-7. **Execution path** — Trace the actual control flow and data flow with concrete symbols and files.
-8. **Code reading** — Only after the map is stable, descend from module to interface to function to branch to important lines or tokens.
-9. **Recap** — Compress the lesson into a small mental model and place it back on the overall route.
+Repetition is useful when the angle or depth changes. Briefly restate a definition before deepening it; do not repeat unchanged prose.
 
-Repetition is allowed when it changes the viewing angle or depth. Reintroduce a definition briefly before a deeper explanation; do not copy the same paragraph unchanged.
+## Preserve important distinctions
 
-## Separate layers explicitly
-
-Call out these distinctions whenever they matter:
+State which layer is under discussion whenever terms overlap. Common distinctions include:
 
 - compile-time type vs runtime value;
-- configuration row vs module specifier vs loaded plugin vs object instance;
+- configuration vs module vs class vs instance;
 - interface vs implementation vs adapter;
-- registry/store vs one registered domain object;
+- registry/store vs one registered object;
+- authoritative state vs projection/cache/presentation;
 - control flow vs data flow;
-- authoritative state vs projection/cache/UI representation;
 - in-memory lifecycle vs durable storage;
-- static dependency declaration vs dynamic lookup;
-- framework mechanism vs repository-specific policy.
+- framework mechanism vs product policy;
+- sourced fact vs inference vs teaching analogy.
 
-When a term is overloaded, state which meaning applies before continuing.
+## Use evidence proportionally
 
-## Ground explanations in evidence
+- For a standalone concept, verify unstable or specialized claims when needed; do not manufacture code evidence.
+- For supplied files or references, read the material and explain its role before its lines.
+- For a codebase, inspect instructions, entrypoints, callers, state owners, and failure paths. Link exact files and tight line positions.
+- Treat documentation as intent and implementation as current behavior; surface disagreement.
+- Do not claim runtime validation from types alone or certainty beyond the available evidence.
 
-- Inspect the implementation and its callers before explaining architecture.
-- Link the exact local files and tight line positions that support the explanation.
-- Trace at least one real path end to end before judging the design.
-- Treat documentation as intent and code as current behavior; reconcile disagreements explicitly.
-- Do not claim runtime behavior from TypeScript declarations alone or type safety across an unvalidated trust boundary.
+## Feedback entrance
 
-## Drill down without losing the learner
+End each substantive lesson with one compact entrance:
 
-Use this zoom ladder:
+> 反馈入口：直接说“反馈：没懂的是…… / 不适合的是…… / 希望改成……”。
 
-```text
-system purpose
-  → executable/product surface
-    → subsystem
-      → module and interface
-        → runtime objects and ownership
-          → call/data/lifecycle path
-            → function
-              → important branch
-                → line or token
-```
+Recognize equivalent natural-language feedback even without the prefix. Respond to feedback by:
 
-Do not jump directly from system purpose to line-by-line narration. Line-level detail without the owning module and execution path becomes syntax commentary rather than understanding.
+1. naming the likely misunderstanding or teaching mismatch;
+2. changing one explanatory variable at a time where practical;
+3. re-explaining immediately with a materially different approach;
+4. checking whether the new explanation resolved the problem;
+5. recording only evidence-supported preferences.
 
-When reading line by line:
+Read `references/feedback-learning.md` before persisting feedback.
 
-- explain language syntax only when it blocks understanding;
-- say what state changes, what value is produced, who consumes it, and who owns cleanup;
-- group obvious mechanical lines and spend detail on invariants, branching, failure behavior, concurrency, and non-obvious syntax;
-- connect each code block back to the module's interface and the system path.
+An explicit `反馈：` message authorizes updating only the active local learner profile. Feedback expressed another way should change the current explanation immediately; propose the durable profile change and persist it after confirmation. Neither form authorizes committing, pushing, telemetry, or publishing personal feedback.
 
-## Handle learner detours
+## Keep personal and shared learning separate
 
-Answer prerequisite questions fully when they block the main path. Then state where the detour reconnects and resume from the saved position. Do not treat basic language or tooling questions as distractions; they are part of building the correct model.
+- `references/learner-profiles.local.md` is private, local, and gitignored. Keep separate sections for separate learner-chosen identifiers.
+- `references/validated-principles.md` contains anonymous teaching principles with evidence across learners or repeated contexts.
+- Never copy identifying details, raw conversation transcripts, repository secrets, or personal content into shared principles.
+- Promote a pattern from a personal profile only after repeated successful use or explicit validation. Promote it to shared principles only after independent learners or contexts support it and contradictory evidence is recorded.
+- Do not automatically sync profiles across machines. Cross-device or cross-user aggregation requires an explicitly chosen storage and consent model.
 
-Prefer progressive depth over one enormous survey. A lesson may end at a natural module seam while preserving the next exact file or symbol to inspect.
+## Evaluate meaningful revisions
 
-## Maintain and evolve this skill
+For a substantial change to presets or feedback learning, read `references/quality-scorecard.md`. Exercise concept, reference, and codebase cases plus one negative-feedback recovery. When independent evaluation is available and authorized, separate the teaching run from the scoring run; do not treat self-assessment as proof.
 
-When the user explicitly refines their learning preferences:
+## Maintain the Skill
 
-- update `references/learner-profile.md` with the durable preference;
-- update this file only when the teaching method itself changes for future codebases;
-- do not add one-off misunderstandings, repository facts, lesson transcripts, or a changelog;
-- resolve conflicts by following the user's latest explicit preference;
-- keep new rules tied to an observed failure mode or desired learning outcome.
-
-Use the smallest durable change that captures the new preference. Avoid accumulating overlapping rules that say the same thing.
+- Change `SKILL.md` only when routing or the stable teaching discipline changes.
+- Change `references/presets.md` when one explanation class needs different sequencing.
+- Change the active local learner profile for individual preferences.
+- Change shared principles only when evidence supports generalization.
+- Prefer replacing a superseded rule over adding another overlapping rule.
+- Keep full lesson transcripts and project learning state outside this global Skill.

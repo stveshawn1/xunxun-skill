@@ -1,4 +1,4 @@
 interface:
-  display_name: "Paoding"
-  short_description: "Follow a codebase from definitions to its natural seams"
-  default_prompt: "Use $paoding to guide me through this codebase step by step."
+  display_name: "Xunxun · 循循"
+  short_description: "Adaptive explanations for concepts, files, and codebases"
+  default_prompt: "Use $xunxun to explain this in the way I learn best."

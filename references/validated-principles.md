@@ -12,3 +12,8 @@ These principles are shared and non-identifying. Keep only rules supported by re
 - Prerequisite detours are legitimate, but the lesson must preserve and return to its main route.
 - A teaching preference is personal evidence before it is a shared principle.
 - An explanation is not validated merely because it is fluent; learner feedback or transfer to a new case is stronger evidence.
+- Continued questioning is ambiguous: distinguish deeper progression from repetition of the same unresolved premise.
+- Infer explanation fit from subsequent behavior where possible; direct calibration should target a substantive ambiguity, not ask for a generic satisfaction rating.
+- Treat each adaptive change as a scoped treatment delta and preserve its predicted and observed signals before generalizing.
+- Change one explanation dimension at a time when practical; mark unavoidable bundles as compound treatments rather than assigning unsupported credit.
+- Behavioral evidence in an ordinary conversation updates a hypothesis but does not identify a causal effect without a credible counterfactual.

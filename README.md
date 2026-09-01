@@ -1,15 +1,15 @@
 # Xunxun · 循循
 
-> Definition, intuition, evidence, feedback, then a better explanation.
+> Explain, observe, adapt — without turning learning into a survey.
 
-Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases through explicit explanation presets. It keeps each learner’s validated preferences local, adapts when an explanation fails, and promotes only anonymous, repeatedly validated patterns into shared teaching principles.
+Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases through explicit explanation presets. It observes whether later behavior progresses, repeats, transfers, or rejects the model; then applies a small explanation treatment and updates only local, evidence-supported preferences.
 
 ## What it does
 
 - **Concept preset** — definitions, distinctions, minimal examples, value, and limits.
 - **Reference preset** — place a file or artifact in its system before reading critical regions.
 - **Codebase preset** — follow entrypoints, natural seams, execution paths, state, and lifecycle before line-level code.
-- **Feedback learning** — accept `反馈：...`, retry with a different explanatory variable, validate, and update a private learner profile.
+- **Adaptive learning** — infer fit from ongoing behavior, apply a scoped treatment delta, and update a compact private evidence ledger.
 - **Honest personalization** — no identity inference, telemetry, automatic upload, or claim of cross-device learning.
 
 ## Install
@@ -30,7 +30,7 @@ Or ask a Skill-compatible agent to install:
 用循循解释一下 TypeScript 的类型擦除。
 用循循带我读这个文件，先说它在系统中的角色。
 用循循带我走完整个代码库的主链路。
-反馈：这个解释太抽象，我需要先看一个具体例子。
+这个解释还是太抽象，我其实卡在“运行时为什么不认类型”。
 ```
 
 ## Repository structure
@@ -41,9 +41,9 @@ xunxun-skill/
 ├── agents/openai.yaml
 └── references/
     ├── presets.md
-    ├── feedback-learning.md
+    ├── adaptive-learning.md
     ├── validated-principles.md
-    ├── learner-profile.template.md
+    ├── learner-profile-template.md
     └── quality-scorecard.md
 ```
 

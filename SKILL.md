@@ -1,6 +1,6 @@
 ---
 name: xunxun
-description: Teach or explain a concept, code fragment, file, reference, toolchain, architecture, or codebase when the user wants to understand it rather than merely get an answer or implementation. Use for requests such as “what is this,” “explain intuitively,” “walk me through this file/codebase,” “why is it designed this way,” or “I still don’t understand.” Select a teaching preset, adapt to the active learner profile, and treat feedback as evidence for improving that learner’s explanation style. Do not use for ordinary execution, editing, debugging, or review unless learning is an explicit goal.
+description: Teach or explain a concept, code fragment, file, reference, toolchain, architecture, or codebase when the user wants to understand it rather than merely get an answer or implementation. Use for requests such as “what is this,” “explain intuitively,” “walk me through this file/codebase,” “why is it designed this way,” or repeated follow-ups that reveal the current explanation is not working. Select a teaching preset, infer fit from the learner’s ongoing behavior, and adapt conservatively without turning the conversation into a satisfaction survey. Do not use for ordinary execution, editing, debugging, or review unless learning is an explicit goal.
 ---
 
 # Xunxun
@@ -18,7 +18,7 @@ Before a substantive explanation:
 3. If `references/learner-profiles.local.md` exists, read the active learner’s section. If several profiles exist and identity is unclear, ask once which profile to use; never infer identity from account, path, or repository metadata.
 4. Keep topic-specific progress in the active task or thread, not in the global Skill.
 
-When no learner profile exists, use the neutral defaults in `references/learner-profile.template.md` without blocking the explanation.
+When no learner profile exists, use the neutral defaults in `references/learner-profile-template.md` without blocking the explanation.
 
 ## Shared explanation contract
 
@@ -58,35 +58,35 @@ State which layer is under discussion whenever terms overlap. Common distinction
 - Treat documentation as intent and implementation as current behavior; surface disagreement.
 - Do not claim runtime validation from types alone or certainty beyond the available evidence.
 
-## Feedback entrance
+## Adapt from ongoing behavior
 
-End each substantive lesson with one compact entrance:
+Do not append a feedback form or routinely ask whether the learner is satisfied. Treat each relevant follow-up as evidence about both the subject and the explanation method.
 
-> 反馈入口：直接说“反馈：没懂的是…… / 不适合的是…… / 希望改成……”。
+Read `references/adaptive-learning.md` when behavior suggests a mismatch or before changing a learner profile. In brief:
 
-Recognize equivalent natural-language feedback even without the prefix. Respond to feedback by:
+1. identify the likely comprehension gap or explanation mismatch;
+2. choose the smallest plausible change to the explanation — the treatment;
+3. state the treatment internally as a delta from the current baseline, not as a new personality label;
+4. predict what near-term behavior would count for or against it;
+5. apply it without announcing an experiment unless transparency is needed;
+6. observe the learner’s next relevant turns and update the treatment status conservatively.
 
-1. naming the likely misunderstanding or teaching mismatch;
-2. changing one explanatory variable at a time where practical;
-3. re-explaining immediately with a materially different approach;
-4. checking whether the new explanation resolved the problem;
-5. recording only evidence-supported preferences.
+Strong evidence includes successful transfer to a new case, correct use of the distinction, disappearance of the same confusion, or explicit correction/endorsement. Continued questioning alone is ambiguous: it may signal engagement or unresolved confusion.
 
-Read `references/feedback-learning.md` before persisting feedback.
-
-An explicit `反馈：` message authorizes updating only the active local learner profile. Feedback expressed another way should change the current explanation immediately; propose the durable profile change and persist it after confirmation. Neither form authorizes committing, pushing, telemetry, or publishing personal feedback.
+Ask a direct calibration question only when behavioral evidence remains ambiguous and choosing the wrong branch would materially waste the learner’s time. Ask about the substantive fork — for example, which part of a mechanism is unclear — rather than “Are you satisfied?”
 
 ## Keep personal and shared learning separate
 
 - `references/learner-profiles.local.md` is private, local, and gitignored. Keep separate sections for separate learner-chosen identifiers.
 - `references/validated-principles.md` contains anonymous teaching principles with evidence across learners or repeated contexts.
 - Never copy identifying details, raw conversation transcripts, repository secrets, or personal content into shared principles.
-- Promote a pattern from a personal profile only after repeated successful use or explicit validation. Promote it to shared principles only after independent learners or contexts support it and contradictory evidence is recorded.
+- Store each active change as a treatment with context, baseline, delta, predicted signal, observed signal, confounders, status, and confidence. Consolidate by treatment dimension instead of accumulating a chronological diary.
+- Promote a pattern from a personal profile only after repeated compatible behavioral evidence or explicit evidence plus successful transfer. Promote it to shared principles only after independent learners or contexts support it and contradictory evidence is recorded.
 - Do not automatically sync profiles across machines. Cross-device or cross-user aggregation requires an explicitly chosen storage and consent model.
 
 ## Evaluate meaningful revisions
 
-For a substantial change to presets or feedback learning, read `references/quality-scorecard.md`. Exercise concept, reference, and codebase cases plus one negative-feedback recovery. When independent evaluation is available and authorized, separate the teaching run from the scoring run; do not treat self-assessment as proof.
+For a substantial change to presets or adaptive learning, read `references/quality-scorecard.md`. Exercise concept, reference, and codebase cases plus implicit-confusion recovery, multiple suggested changes, and transfer to a new case. When independent evaluation is available and authorized, separate the teaching run from the scoring run; do not treat self-assessment as proof.
 
 ## Maintain the Skill
 

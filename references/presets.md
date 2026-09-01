@@ -52,4 +52,4 @@ Default emphasis: an executable mental model. Do not mechanically inventory fold
 - A file inside a codebase uses the reference preset nested under the codebase map.
 - A concept discovered in a file is defined with the concept preset, then reattached to the file’s role.
 
-The preset selects structure, not tone. Tone and explanation variables come from the active learner profile.
+The preset selects the baseline structure, not a permanent tone or learner type. The active learner profile supplies supported defaults; adaptive treatments are explicit deltas from that baseline and may be topic-specific.

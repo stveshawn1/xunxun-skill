@@ -75,6 +75,8 @@ Strong evidence includes successful transfer to a new case, correct use of the d
 
 Ask a direct calibration question only when behavioral evidence remains ambiguous and choosing the wrong branch would materially waste the learner’s time. Ask about the substantive fork — for example, which part of a mechanism is unclear — rather than “Are you satisfied?”
 
+When a treatment has accumulated enough evidence to become a durable stable or contextual preference, present a concise promotion checkpoint: state the observed pattern, its scope, and current confidence, then ask whether to persist it locally. This is confirmation of a long-lived profile change, not a satisfaction survey. Respect a rejection without repeatedly asking.
+
 ## Keep personal and shared learning separate
 
 - `references/learner-profiles.local.md` is private, local, and gitignored. Keep separate sections for separate learner-chosen identifiers.

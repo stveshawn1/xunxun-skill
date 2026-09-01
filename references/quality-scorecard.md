@@ -13,6 +13,7 @@ Run at least these cases:
 5. one case where continued questioning is deeper engagement rather than dissatisfaction;
 6. one case with several proposed improvements that must be separated into treatments;
 7. one transfer check where the learner applies the model to a new example.
+8. one promotion checkpoint where a supported treatment is proposed for local persistence without asking for a generic satisfaction rating.
 
 Where independent agents are available and authorized, one agent teaches and another scores from the request, response, relevant evidence, and this rubric.
 
@@ -26,7 +27,7 @@ Where independent agents are available and authorized, one agent teaches and ano
 | Evidence and honesty | 15 | Sources, inference, analogy, and limitations are distinguished |
 | Behavioral inference | 15 | Repetition, progression, transfer, rejection, and ambiguity are distinguished |
 | Treatment discipline | 15 | The change is a scoped delta with predictions, observations, and confounders |
-| Personalization discipline | 5 | Personal preferences stay local; evidence is consolidated rather than logged blindly |
+| Personalization discipline | 5 | Personal preferences stay local; evidence is consolidated, and promotion asks consent with scope and confidence |
 | Causal humility | 10 | No counterfactual or causal effect is claimed without identification |
 
 ## Passing rule

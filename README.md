@@ -9,7 +9,8 @@ Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases th
 - **Concept preset** — definitions, distinctions, minimal examples, value, and limits.
 - **Reference preset** — place a file or artifact in its system before reading critical regions.
 - **Codebase preset** — follow entrypoints, natural seams, execution paths, state, and lifecycle before line-level code.
-- **Adaptive learning** — infer fit from ongoing behavior, apply a scoped treatment delta, and update a compact private evidence ledger.
+- **Adaptive learning** — use a contextual-bandit-inspired loop to select scoped treatment deltas, infer fit from ongoing behavior, and update a compact private evidence ledger.
+- **Promotion checkpoints** — when a durable preference is supported, explain the proposed local update and ask whether to retain it.
 - **Honest personalization** — no identity inference, telemetry, automatic upload, or claim of cross-device learning.
 
 ## Install

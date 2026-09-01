@@ -19,6 +19,34 @@ Useful theoretical lenses:
 - Micro-randomized trials: repeated decision points, proximal outcomes, and time-varying moderation — <https://www.ambujtewari.com/research/klasnja15microrandomized.pdf>. Xunxun does not randomize explanations by default.
 - Contextual bandits: choose an action from context, observe only the selected action’s reward, and update the policy — <https://arxiv.org/abs/1003.0146>.
 
+## What Xunxun borrows from contextual bandits
+
+Use the framework as a decision discipline, not as a claim that Xunxun runs a numerical bandit algorithm.
+
+| Bandit element | Xunxun counterpart |
+|---|---|
+| Context | Topic, preset, learner history, current confusion, and prior treatment evidence |
+| Action set | Plausible explanation deltas: concrete-first, layer map, smaller lesson, different representation, stronger evidence, and so on |
+| Policy | Prefer the supported treatment for comparable contexts; otherwise choose the lowest-cost plausible treatment |
+| Reward signal | Transfer, correct distinction use, deeper progression, repeated confusion, rejection, or misapplication |
+| Partial feedback | Observe the chosen treatment only; keep alternatives uncertain |
+| Exploration | Try a different low-cost plausible treatment when evidence is weak or the current one fails |
+| Exploitation | Reuse a supported stable or contextual preference where its scope matches |
+| Update | Raise, lower, narrow, or supersede qualitative confidence from subsequent behavior |
+
+The useful loop is:
+
+```text
+observe context
+  → generate a small candidate set
+  → choose one conservative treatment
+  → predict proximal behavior
+  → observe only that treatment’s outcome
+  → update scoped confidence
+```
+
+Do not force exploration after a working explanation, assign a numeric reward without a defined measure, or infer the value of unchosen treatments.
+
 ## Detect a likely mismatch
 
 Infer explanation fit from the sequence, not one phrase in isolation.
@@ -106,6 +134,26 @@ candidate → active → supported
 
 One positive turn raises confidence but rarely establishes a general preference. One negative turn weakens a treatment but may reflect a harder topic. Prefer patterns across comparable contexts.
 
+## Promotion checkpoint
+
+When evidence supports moving an active treatment into stable or contextual preferences, summarize the proposed update instead of asking for a generic rating:
+
+```text
+我观察到：在运行时/信任边界问题上，先看具体失败案例后，
+你能更稳定地区分静态类型与运行时校验。
+我准备把它沉淀为“该类主题 concrete-first”的情境偏好；要保留吗？
+```
+
+Include:
+
+- the treatment, not a personality label;
+- the contexts where it appears to work;
+- the evidence summary;
+- current qualitative confidence;
+- the exact local profile change proposed.
+
+If the learner confirms, persist locally and promote the state. If they narrow it, store the narrower scope. If they reject it, keep the evidence as contradicted or discard it when it was a mistaken diagnosis. Do not interpret consent to persist as proof that the treatment caused understanding.
+
 ## Local treatment ledger
 
 Maintain one compact ledger per learner in `learner-profiles.local.md`:
@@ -149,6 +197,7 @@ Ask directly only when:
 - the next behavior remains ambiguous after a low-cost trial;
 - the user requests explicit control over the teaching method;
 - a persistent profile change would be consequential and evidence is conflicting.
+- a supported treatment has reached a promotion checkpoint and local persistence needs consent.
 
 Ask about the actual uncertainty, for example “Are you stuck on why the object exists, or on how the Proxy returns it?” This produces more useful evidence than a satisfaction rating.
 

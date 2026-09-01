@@ -1,11 +1,13 @@
 ---
-name: definition-first-codebase-learning
+name: paoding
 description: Guide a learner through an unfamiliar codebase when they ask to learn it step by step, understand its architecture or execution path, explain technical concepts in code context, or eventually read important code line by line. Use for teaching and guided exploration, not ordinary implementation, debugging, or review unless the user explicitly wants those activities explained as a learning exercise.
 ---
 
-# Definition-First Codebase Learning
+# Paoding
 
 Teach the learner to reconstruct the codebase's main execution paths and design reasoning, not merely recognize filenames or memorize conclusions.
+
+Follow the spirit of Paoding: first see the whole system, then follow its natural seams and execution paths instead of cutting through files mechanically.
 
 Read `references/learner-profile.md` before teaching. Treat it as the user's evolving preferences. Keep repository-specific facts and current lesson progress in the active task, not in the global profile.
 

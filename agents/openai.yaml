@@ -1,4 +1,4 @@
 interface:
-  display_name: "Definition-First Codebase Learning"
-  short_description: "Learn codebases from definitions to full execution paths"
-  default_prompt: "Use $definition-first-codebase-learning to guide me through this codebase step by step."
+  display_name: "Paoding"
+  short_description: "Follow a codebase from definitions to its natural seams"
+  default_prompt: "Use $paoding to guide me through this codebase step by step."

@@ -10,6 +10,9 @@ Copy this file to `learner-profiles.local.md` when a writable installation begin
 ### Contextual preferences
 - None recorded.
 
+### Vocabulary evidence
+- No recurring vocabulary evidence recorded yet.
+
 ### Active treatments
 - None active.
 

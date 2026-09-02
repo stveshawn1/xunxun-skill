@@ -9,6 +9,7 @@ Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases th
 - **Concept preset** — definitions, distinctions, minimal examples, value, and limits.
 - **Reference preset** — place a file or artifact in its system before reading critical regions.
 - **Codebase preset** — follow entrypoints, natural seams, execution paths, state, and lifecycle before line-level code.
+- **Terminology bridging** — add a minimal intuitive gloss when the learner has not demonstrated a required specialized term.
 - **Adaptive learning** — use a contextual-bandit-inspired loop to select scoped treatment deltas, infer fit from ongoing behavior, and update a compact private evidence ledger.
 - **Promotion checkpoints** — when a durable preference is supported, explain the proposed local update and ask whether to retain it.
 - **Honest personalization** — no identity inference, telemetry, automatic upload, or claim of cross-device learning.
@@ -40,15 +41,25 @@ Or ask a Skill-compatible agent to install:
 xunxun-skill/
 ├── SKILL.md
 ├── agents/openai.yaml
-└── references/
-    ├── presets.md
-    ├── adaptive-learning.md
-    ├── validated-principles.md
-    ├── learner-profile-template.md
-    └── quality-scorecard.md
+├── references/
+│   ├── presets.md
+│   ├── adaptive-learning.md
+│   ├── terminology-bridging.md
+│   ├── comparison-protocol.md
+│   ├── validated-principles.md
+│   ├── learner-profile-template.md
+│   └── quality-scorecard.md
+├── evals/
+│   └── case-template.md
+└── examples/
+    └── comparison-template.md
 ```
 
 The real learner profile lives in the gitignored `references/learner-profiles.local.md`. It is never committed or pushed by the Skill.
+
+## Compare with and without Xunxun
+
+Use `evals/case-template.md` to run the same prompt in fresh, matched sessions without and with Xunxun. Record unedited outputs and human review before drawing a conclusion. Promote only privacy-safe, representative reviewed cases into `examples/` using `examples/comparison-template.md`.
 
 ## Design boundary
 

@@ -50,6 +50,18 @@ State which layer is under discussion whenever terms overlap. Common distinction
 - framework mechanism vs product policy;
 - sourced fact vs inference vs teaching analogy.
 
+## Bridge unsupported vocabulary
+
+Before first using a specialized term, check whether the conversation provides evidence that the learner knows it: explicit background, correct prior use, a previous explanation followed by successful application, or an equivalent demonstrated concept. Repository choice, job title, account, or silence is not enough evidence.
+
+When evidence is absent:
+
+- for an incidental term, add one compact micro-gloss that fills the placeholder without leaving the main path;
+- for a term central to the current explanation, temporarily use the concept preset, then reconnect;
+- avoid defining a new term with several more unexplained terms.
+
+Read `references/terminology-bridging.md` when vocabulary density is high or when a follow-up suggests a missing term caused the confusion.
+
 ## Use evidence proportionally
 
 - For a standalone concept, verify unstable or specialized claims when needed; do not manufacture code evidence.
@@ -88,7 +100,7 @@ When a treatment has accumulated enough evidence to become a durable stable or c
 
 ## Evaluate meaningful revisions
 
-For a substantial change to presets or adaptive learning, read `references/quality-scorecard.md`. Exercise concept, reference, and codebase cases plus implicit-confusion recovery, multiple suggested changes, and transfer to a new case. When independent evaluation is available and authorized, separate the teaching run from the scoring run; do not treat self-assessment as proof.
+For a substantial change to presets or adaptive learning, read `references/quality-scorecard.md`. Exercise concept, reference, and codebase cases plus unsupported vocabulary, implicit-confusion recovery, multiple suggested changes, and transfer to a new case. When comparing Xunxun against a baseline, follow `references/comparison-protocol.md`; keep raw cases under `evals/` and only reviewed, privacy-safe demonstrations under `examples/`. When independent evaluation is available and authorized, separate the teaching run from the scoring run; do not treat self-assessment as proof.
 
 ## Maintain the Skill
 

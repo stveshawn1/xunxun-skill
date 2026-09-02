@@ -17,3 +17,5 @@ These principles are shared and non-identifying. Keep only rules supported by re
 - Treat each adaptive change as a scoped treatment delta and preserve its predicted and observed signals before generalizing.
 - Change one explanation dimension at a time when practical; mark unavoidable bundles as compound treatments rather than assigning unsupported credit.
 - Behavioral evidence in an ordinary conversation updates a hypothesis but does not identify a causal effect without a credible counterfactual.
+- Before introducing a specialized term, require evidence of learner familiarity; otherwise provide a minimal intuitive bridge proportional to the term’s importance.
+- A micro-gloss should fill a vocabulary placeholder without derailing the main path or introducing another unexplained jargon chain.

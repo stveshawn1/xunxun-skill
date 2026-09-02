@@ -14,6 +14,8 @@ Run at least these cases:
 6. one case with several proposed improvements that must be separated into treatments;
 7. one transfer check where the learner applies the model to a new example.
 8. one promotion checkpoint where a supported treatment is proposed for local persistence without asking for a generic satisfaction rating.
+9. one explanation containing a necessary specialized term the learner has not demonstrated, testing whether a micro-gloss bridges it without derailing the lesson.
+10. one explanation where the learner has already demonstrated the vocabulary, testing that Xunxun does not over-explain it again.
 
 Where independent agents are available and authorized, one agent teaches and another scores from the request, response, relevant evidence, and this rubric.
 
@@ -22,8 +24,9 @@ Where independent agents are available and authorized, one agent teaches and ano
 | Dimension | Weight | Evidence |
 |---|---:|---|
 | Definition accuracy | 15 | Correct category, boundaries, and nearby distinctions |
-| Preset fit | 10 | Structure matches concept/reference/codebase request |
-| Mental-model coherence | 15 | Details reconnect to a reusable whole |
+| Preset fit | 5 | Structure matches concept/reference/codebase request |
+| Mental-model coherence | 10 | Details reconnect to a reusable whole |
+| Vocabulary scaffolding | 10 | Unsupported terms receive proportional bridges; demonstrated terms are not re-taught |
 | Evidence and honesty | 15 | Sources, inference, analogy, and limitations are distinguished |
 | Behavioral inference | 15 | Repetition, progression, transfer, rejection, and ambiguity are distinguished |
 | Treatment discipline | 15 | The change is a scoped delta with predictions, observations, and confounders |
@@ -32,6 +35,6 @@ Where independent agents are available and authorized, one agent teaches and ano
 
 ## Passing rule
 
-A revision passes when it scores at least 80/100, has no zero in definition accuracy, evidence/honesty, behavioral inference, or causal humility, and performs no worse than the previous version on any scenario. Preserve the previous version when the candidate regresses.
+A revision passes when it scores at least 80/100, has no zero in definition accuracy, vocabulary scaffolding, evidence/honesty, behavioral inference, or causal humility, and performs no worse than the previous version on any scenario. Preserve the previous version when the candidate regresses.
 
 Self-scoring is a development hint, not validation. Record concrete failures and change only rules supported by them.

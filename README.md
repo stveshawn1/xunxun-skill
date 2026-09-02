@@ -46,8 +46,9 @@ xunxun-skill/
 │   ├── adaptive-learning.md
 │   ├── terminology-bridging.md
 │   ├── comparison-protocol.md
+│   ├── local-state.md
 │   ├── validated-principles.md
-│   ├── learner-profile-template.md
+│   ├── local-state-templates.md
 │   └── quality-scorecard.md
 ├── evals/
 │   └── case-template.md
@@ -55,7 +56,7 @@ xunxun-skill/
     └── comparison-template.md
 ```
 
-The real learner profile lives in the gitignored `references/learner-profiles.local.md`. It is never committed or pushed by the Skill.
+The repository contains rules and templates only. Private state lives under non-empty `$XUNXUN_HOME`, otherwise `~/.xunxun`, separated into global learner profile/vocabulary and per-project ledgers. Current Session state remains ephemeral.
 
 ## Compare with and without Xunxun
 
@@ -63,4 +64,4 @@ Use `evals/case-template.md` to run the same prompt in fresh, matched sessions w
 
 ## Design boundary
 
-Xunxun has no account system or synchronization backend. It can maintain explicitly selected local learner profiles. Cross-device or cross-installation learning requires a separate consent, identity, and storage design.
+Xunxun has no account system, automatic Session-end hook, locking, or synchronization backend. It can maintain explicitly selected local learner and project state. Cross-device or concurrent-writer support requires a separate consent, identity, and storage design.

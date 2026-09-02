@@ -4,8 +4,8 @@ Compare the same explanation task with and without Xunxun while keeping other co
 
 ## Conditions
 
-- **Baseline** — the agent receives the task and source material but cannot read Xunxun, its references, or a learner profile.
-- **Treatment** — the agent receives the same task and source material with Xunxun enabled. State whether it uses the neutral template or a named local profile.
+- **Baseline** — the agent receives the task and source material but cannot read Xunxun, its references, or private Xunxun state.
+- **Treatment** — the agent receives the same task and source material with Xunxun enabled. State whether it uses neutral defaults or a named local learner/project state set.
 
 Keep fixed where possible:
 

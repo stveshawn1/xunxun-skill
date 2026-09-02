@@ -15,10 +15,12 @@ Before a substantive explanation:
 
 1. Read `references/validated-principles.md`.
 2. Read `references/presets.md` and select one preset: concept, reference, or codebase.
-3. If `references/learner-profiles.local.md` exists, read the active learner’s section. If several profiles exist and identity is unclear, ask once which profile to use; never infer identity from account, path, or repository metadata.
-4. Keep topic-specific progress in the active task or thread, not in the global Skill.
+3. Read `references/local-state.md`. Resolve the private state home from non-empty `$XUNXUN_HOME`, otherwise `~/.xunxun`.
+4. Resolve the learner only from an explicit choice or an unambiguous single-user local installation; never infer identity from account, path, email, or repository metadata.
+5. Read the learner’s global `profile.md` and `vocabulary.md` when present. For a project-backed lesson, also read the matching project ledger.
+6. Keep the current Session’s working vocabulary, active explanation, and immediate observations in the conversation; do not create a Session file.
 
-When no learner profile exists, use the neutral defaults in `references/learner-profile-template.md` without blocking the explanation.
+When local state is absent, use `references/local-state-templates.md` as neutral defaults without blocking the explanation. Create private state only when a durable preference, vocabulary promotion, or project milestone actually needs persistence.
 
 ## Shared explanation contract
 
@@ -60,7 +62,7 @@ When evidence is absent:
 - for a term central to the current explanation, temporarily use the concept preset, then reconnect;
 - avoid defining a new term with several more unexplained terms.
 
-Read `references/terminology-bridging.md` when vocabulary density is high or when a follow-up suggests a missing term caused the confusion.
+Read `references/terminology-bridging.md` when vocabulary density is high or when a follow-up suggests a missing term caused the confusion. Resolve familiarity in this order: current Session evidence → project/domain vocabulary → global/domain demonstrated vocabulary → unknown.
 
 ## Use evidence proportionally
 
@@ -87,14 +89,15 @@ Strong evidence includes successful transfer to a new case, correct use of the d
 
 Ask a direct calibration question only when behavioral evidence remains ambiguous and choosing the wrong branch would materially waste the learner’s time. Ask about the substantive fork — for example, which part of a mechanism is unclear — rather than “Are you satisfied?”
 
-When a treatment has accumulated enough evidence to become a durable stable or contextual preference, present a concise promotion checkpoint: state the observed pattern, its scope, and current confidence, then ask whether to persist it locally. This is confirmation of a long-lived profile change, not a satisfaction survey. Respect a rejection without repeatedly asking.
+When a treatment has accumulated enough evidence to become a durable stable or contextual preference, present a concise promotion checkpoint: state the observed pattern, its scope, and current confidence, then ask whether to persist it locally. Persist global preferences to the learner profile and project-only findings to that project ledger. This is confirmation of a long-lived profile change, not a satisfaction survey. Respect a rejection without repeatedly asking.
 
 ## Keep personal and shared learning separate
 
-- `references/learner-profiles.local.md` is private, local, and gitignored. Keep separate sections for separate learner-chosen identifiers.
+- The Skill directory contains rules and templates only. Private state lives under the resolved Xunxun state home, outside every Skill checkout and project repository.
+- Global learner preferences belong in `learners/<learner>/profile.md`; cross-project demonstrated vocabulary belongs in `learners/<learner>/vocabulary.md`; project progress, project/domain vocabulary, and project-scoped treatments belong in `learners/<learner>/projects/<project-key>.md`.
 - `references/validated-principles.md` contains anonymous teaching principles with evidence across learners or repeated contexts.
 - Never copy identifying details, raw conversation transcripts, repository secrets, or personal content into shared principles.
-- Store each active change as a treatment with context, baseline, delta, predicted signal, observed signal, confounders, status, and confidence. Consolidate by treatment dimension instead of accumulating a chronological diary.
+- Keep Session experiments ephemeral. Persist a treatment only when it remains active across a natural project checkpoint or has enough evidence for promotion. Store context, baseline, delta, predicted signal, observed signal, confounders, status, and confidence; consolidate by treatment dimension instead of accumulating a chronological diary.
 - Promote a pattern from a personal profile only after repeated compatible behavioral evidence or explicit evidence plus successful transfer. Promote it to shared principles only after independent learners or contexts support it and contradictory evidence is recorded.
 - Do not automatically sync profiles across machines. Cross-device or cross-user aggregation requires an explicitly chosen storage and consent model.
 
@@ -106,7 +109,7 @@ For a substantial change to presets or adaptive learning, read `references/quali
 
 - Change `SKILL.md` only when routing or the stable teaching discipline changes.
 - Change `references/presets.md` when one explanation class needs different sequencing.
-- Change the active local learner profile for individual preferences.
+- Change private state outside the Skill checkout for individual preferences, vocabulary, and project progress.
 - Change shared principles only when evidence supports generalization.
 - Prefer replacing a superseded rule over adding another overlapping rule.
 - Keep full lesson transcripts and project learning state outside this global Skill.

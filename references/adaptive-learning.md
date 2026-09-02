@@ -154,36 +154,14 @@ Include:
 
 If the learner confirms, persist locally and promote the state. If they narrow it, store the narrower scope. If they reject it, keep the evidence as contradicted or discard it when it was a mistaken diagnosis. Do not interpret consent to persist as proof that the treatment caused understanding.
 
-## Local treatment ledger
+## Persist treatments by scope
 
-Maintain one compact ledger per learner in `learner-profiles.local.md`:
+Follow `references/local-state.md`:
 
-```markdown
-### Stable preferences
-- Treatment: definition before analogy
-  Scope: unfamiliar framework concepts
-  Confidence: high
-  Evidence: repeated successful transfer across two topics
-
-### Contextual preferences
-- Treatment: concrete failure before formal model
-  Scope: runtime/trust-boundary topics
-  Confidence: medium
-
-### Active treatments
-- ID: T-004
-  Context: explaining runtime type erasure
-  Baseline: definition → intuition → example
-  Delta: move executable failure example before mechanism
-  Prediction: learner distinguishes static typing from runtime validation in next relevant turn
-  Observations: pending
-  Confounders: new topic also introduced JSON parsing
-  Status: active
-
-### Contradicted or superseded
-- Treatment: always start with examples
-  Result: contradicted; examples obscured definitions in architecture topics
-```
+- keep low-confidence experiments and proximal observations in the current Session;
+- write an active treatment to the project ledger only when it must survive into another Session;
+- after a promotion checkpoint, write cross-project stable/contextual preferences to the global learner profile;
+- keep project-only preferences and evidence in that project ledger.
 
 After evidence accumulates, fold completed treatments into stable/contextual preferences and retain only a concise evidence summary. Do not keep an append-only diary of every message.
 
@@ -203,7 +181,7 @@ Ask about the actual uncertainty, for example “Are you stuck on why the object
 
 ## Privacy and authorization
 
-- Personal treatment ledgers remain in the gitignored local profile.
+- Personal treatment state remains under the private Xunxun state home, outside Skill and project repositories.
 - Never commit, push, upload, or create telemetry from the ledger.
 - Never infer stable identity from account or machine metadata.
 - Shared principles contain no learner identifiers or raw personal examples.

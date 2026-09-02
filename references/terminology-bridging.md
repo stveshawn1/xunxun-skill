@@ -52,20 +52,21 @@ when posterior, reward, action, and utility are also unsupported. Prefer familia
 Policy 是“在当前情境下选择哪种讲法”的规则。
 ```
 
-## Vocabulary evidence in local profiles
+## Vocabulary evidence by scope
 
 Record only recurring or structurally important terms, not every introduced noun:
 
 ```markdown
-### Vocabulary evidence
-- Term: Contextual Bandit
+## Project vocabulary
+- Term: contextual-bandit@adaptive-explanation
   Status: introduced | working | demonstrated
-  Scope: adaptive explanation design
   Evidence: learner correctly mapped context/action/reward to a new case
 ```
 
 - **introduced** — a bridge was provided; no application evidence yet.
 - **working** — follow-ups use the term plausibly but transfer is untested.
 - **demonstrated** — correct explanation or application provides evidence.
+
+Resolve evidence through `references/local-state.md`: Session first, then exact project/domain evidence, then exact demonstrated global/domain evidence. Newly introduced terms stay in the Session unless they recur; project-specific meanings stay in the project ledger; only demonstrated cross-project meanings enter global vocabulary.
 
 If later behavior contradicts familiarity, lower the status without treating it as failure by the learner; the earlier evidence was incomplete.

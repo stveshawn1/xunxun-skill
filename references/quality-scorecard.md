@@ -16,6 +16,8 @@ Run at least these cases:
 8. one promotion checkpoint where a supported treatment is proposed for local persistence without asking for a generic satisfaction rating.
 9. one explanation containing a necessary specialized term the learner has not demonstrated, testing whether a micro-gloss bridges it without derailing the lesson.
 10. one explanation where the learner has already demonstrated the vocabulary, testing that Xunxun does not over-explain it again.
+11. one cross-Session continuation that restores a compact project checkpoint without replaying transient Session notes.
+12. one overloaded term used in two projects or domains, testing that evidence does not leak across scopes.
 
 Where independent agents are available and authorized, one agent teaches and another scores from the request, response, relevant evidence, and this rubric.
 
@@ -30,7 +32,7 @@ Where independent agents are available and authorized, one agent teaches and ano
 | Evidence and honesty | 15 | Sources, inference, analogy, and limitations are distinguished |
 | Behavioral inference | 15 | Repetition, progression, transfer, rejection, and ambiguity are distinguished |
 | Treatment discipline | 15 | The change is a scoped delta with predictions, observations, and confounders |
-| Personalization discipline | 5 | Personal preferences stay local; evidence is consolidated, and promotion asks consent with scope and confidence |
+| Personalization discipline | 5 | Private state stays outside Skill/projects; Session, project, and global evidence are scoped correctly; promotion asks consent |
 | Causal humility | 10 | No counterfactual or causal effect is claimed without identification |
 
 ## Passing rule

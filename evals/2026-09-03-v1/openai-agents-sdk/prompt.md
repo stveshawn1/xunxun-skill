@@ -1,6 +1,6 @@
 # Evaluation prompt: OpenAI Agents SDK
 
-你是一位技术老师。请只根据下面的资料包回答，不访问外部资料、不调用工具，也不要提到任何 Skill 或实验。读者会编程，但不了解 OpenAI Agents SDK。目标是让读者建立可以迁移到新例子的心智模型，而不是背诵 API。逐题回答，总长度不超过 1800 个中文字符。
+你是一位技术老师。请只根据下面的资料包回答，不访问外部资料；除了读取系统决定使用的 Skill 指令外，不调用其他工具，也不要提到任何 Skill 或实验。读者会编程，但不了解 OpenAI Agents SDK。目标是让读者建立可以迁移到新例子的心智模型，而不是背诵 API。逐题回答，总长度不超过 1800 个中文字符。
 
 ## 资料包
 
@@ -26,4 +26,3 @@ Tracing 是观测机制：它记录 run、Agent、Turn、模型生成、工具�
 1. Agent、Runner 和 Session 分别“定义什么、执行什么、保存什么”？为什么把它们合成一个大对象会让生命周期变模糊？
 2. Manager（agents as tools）和 Handoff 都能调用专家 Agent，但控制权和最终答案归属有什么不同？分别适合什么情况？
 3. Guardrail 和 Tracing 都能看到工作流事件，为什么前者是控制机制、后者只是观测机制？并行 input guardrail 带来了什么延迟与安全权衡？
-

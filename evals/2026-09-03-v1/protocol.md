@@ -18,7 +18,7 @@ This experiment tests explanation structure, boundaries, terminology bridging, m
 | `adaptive-immunity` | biology | no specialist background | 3 |
 | `financial-statements` | accounting | no specialist background | 3 |
 
-Each prompt contains a bounded source packet. Answers must use only that packet, answer in Chinese, avoid tools and external research, and stay under 1,800 Chinese characters.
+Each prompt contains a bounded source packet. Answers must use only that packet, answer in Chinese, use no tools except reading a selected Skill's own instructions, avoid external research, and stay under 1,800 Chinese characters.
 
 ## Conditions
 
@@ -63,4 +63,3 @@ These thresholds are practical decision rules, not a claim of statistical signif
 ## Review
 
 Two fresh model judges should score blinded A/B outputs using this rubric, with Xunxun disabled. The final report must retain both judges' scores, objective character counts, disagreements, unblinded mapping, and a separate evidence-based maintainer review. Self-assessment alone is not proof.
-

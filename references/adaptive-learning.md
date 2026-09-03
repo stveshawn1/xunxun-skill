@@ -159,9 +159,9 @@ If the learner confirms, persist locally and promote the state. If they narrow i
 Follow `references/local-state.md`:
 
 - keep low-confidence experiments and proximal observations in the current Session;
-- write an active treatment to the project ledger only when it must survive into another Session;
+- write an active treatment to the project's `.xunxun/profile.md` only when it must survive into another Session;
 - after a promotion checkpoint, write cross-project stable/contextual preferences to the global learner profile;
-- keep project-only preferences and evidence in that project ledger.
+- keep project-only preferences and evidence in the private project profile.
 
 After evidence accumulates, fold completed treatments into stable/contextual preferences and retain only a concise evidence summary. Do not keep an append-only diary of every message.
 
@@ -181,8 +181,8 @@ Ask about the actual uncertainty, for example “Are you stuck on why the object
 
 ## Privacy and authorization
 
-- Personal treatment state remains under the private Xunxun state home, outside Skill and project repositories.
-- Never commit, push, upload, or create telemetry from the ledger.
+- Cross-project personal preferences remain in the global `.xunxun/profile.md`. Project-personal state remains in the project's `.xunxun/profile.md`, with `.xunxun/` excluded through `.git/info/exclude` in Git repositories.
+- Never commit, push, upload, or create telemetry from private state.
 - Never infer stable identity from account or machine metadata.
 - Shared principles contain no learner identifiers or raw personal examples.
 - The Skill has no cross-device identity or synchronization backend; do not imply otherwise.

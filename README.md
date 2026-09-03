@@ -10,7 +10,7 @@ Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases th
 - **Reference preset** — place a file or artifact in its system before reading critical regions.
 - **Codebase preset** — follow entrypoints, natural seams, execution paths, state, and lifecycle before line-level code.
 - **Terminology bridging** — add a minimal intuitive gloss when the learner has not demonstrated a required specialized term.
-- **Adaptive learning** — use a contextual-bandit-inspired loop to select scoped treatment deltas, infer fit from ongoing behavior, and update a compact private evidence ledger.
+- **Adaptive learning** — use a contextual-bandit-inspired loop to select scoped treatment deltas, infer fit from ongoing behavior, and update compact private state.
 - **Promotion checkpoints** — when a durable preference is supported, explain the proposed local update and ask whether to retain it.
 - **Honest personalization** — no identity inference, telemetry, automatic upload, or claim of cross-device learning.
 
@@ -56,7 +56,7 @@ xunxun-skill/
     └── comparison-template.md
 ```
 
-The repository contains rules and templates only. Private state lives under non-empty `$XUNXUN_HOME`, otherwise `~/.xunxun`, separated into global learner profile/vocabulary and per-project ledgers. Current Session state remains ephemeral.
+The repository contains shared rules and templates. Cross-project preferences live in `$XUNXUN_HOME/profile.md`, or `~/.xunxun/profile.md` by default. Project learning state lives in `<project-root>/.xunxun/profile.md`; Git repositories exclude `.xunxun/` locally through `.git/info/exclude`. Current Session state remains ephemeral.
 
 ## Compare with and without Xunxun
 
@@ -64,4 +64,4 @@ Use `evals/case-template.md` to run the same prompt in fresh, matched sessions w
 
 ## Design boundary
 
-Xunxun has no account system, automatic Session-end hook, locking, or synchronization backend. It can maintain explicitly selected local learner and project state. Cross-device or concurrent-writer support requires a separate consent, identity, and storage design.
+Xunxun deliberately has no term-by-term vocabulary database, account system, automatic Session-end hook, locking, or synchronization backend. It may repeat a small terminology bridge when evidence is unclear; that cost is preferable to maintaining stale vocabulary state. Cross-device or concurrent-writer support requires a separate consent, identity, and storage design.

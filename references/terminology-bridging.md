@@ -52,21 +52,15 @@ when posterior, reward, action, and utility are also unsupported. Prefer familia
 Policy 是“在当前情境下选择哪种讲法”的规则。
 ```
 
-## Vocabulary evidence by scope
+## Familiarity without a vocabulary database
 
-Record only recurring or structurally important terms, not every introduced noun:
+Resolve familiarity from the smallest available evidence surface:
 
-```markdown
-## Project vocabulary
-- Term: contextual-bandit@adaptive-explanation
-  Status: introduced | working | demonstrated
-  Evidence: learner correctly mapped context/action/reward to a new case
-```
+1. correct use or application in the current Session;
+2. a concept listed under `Established concepts` in the project profile;
+3. broad background recorded in the global learner profile;
+4. otherwise, treat the term as unknown and add a proportional bridge.
 
-- **introduced** — a bridge was provided; no application evidence yet.
-- **working** — follow-ups use the term plausibly but transfer is untested.
-- **demonstrated** — correct explanation or application provides evidence.
+Do not persist every term or assign statuses such as introduced, working, or demonstrated. At a natural project milestone, update the compact `Established concepts` section only when it helps resume the learning route. For genuinely cross-project background, update the global profile only through the normal promotion rule.
 
-Resolve evidence through `references/local-state.md`: Session first, then exact project/domain evidence, then exact demonstrated global/domain evidence. Newly introduced terms stay in the Session unless they recur; project-specific meanings stay in the project ledger; only demonstrated cross-project meanings enter global vocabulary.
-
-If later behavior contradicts familiarity, lower the status without treating it as failure by the learner; the earlier evidence was incomplete.
+If evidence is unclear, repeat a short bridge. A few repeated words cost less than a stale vocabulary subsystem.

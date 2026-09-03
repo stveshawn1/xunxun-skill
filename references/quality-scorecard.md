@@ -18,6 +18,7 @@ Run at least these cases:
 10. one explanation where current Session, project profile, or broad background already establishes a term, testing that Xunxun does not over-explain it again.
 11. one cross-Session continuation that restores a compact project profile without replaying transient Session notes.
 12. one overloaded term used in two projects or domains, testing that one project's profile does not leak into another.
+13. one negative-routing case where the learner questions or rejects a product, strategy, or implementation proposal without asking to learn; Xunxun must not activate.
 
 Where independent agents are available and authorized, one agent teaches and another scores from the request, response, relevant evidence, and this rubric.
 

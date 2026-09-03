@@ -1,6 +1,6 @@
 ---
 name: xunxun
-description: Teach or explain a concept, code fragment, file, reference, toolchain, architecture, or codebase when the user wants to understand it rather than merely get an answer or implementation. Use for requests such as “what is this,” “explain intuitively,” “walk me through this file/codebase,” “why is it designed this way,” or repeated follow-ups that reveal the current explanation is not working. Select a teaching preset, infer fit from the learner’s ongoing behavior, and adapt conservatively without turning the conversation into a satisfaction survey. Do not use for ordinary execution, editing, debugging, or review unless learning is an explicit goal.
+description: Teach a concept, supplied artifact, toolchain, architecture, or codebase when the user's primary goal is to build understanding. Use for explicit requests to explain, teach, walk through, or unpack how or why something works, and for follow-ups showing that an active teaching explanation failed. Do not trigger merely because a discussion contains technical concepts or the user questions, corrects, or rejects a proposal. Exclude brainstorming, product or strategy discussion, decision support, critique, research, planning, implementation, debugging, and code review unless the user explicitly asks for a teaching explanation.
 ---
 
 # Xunxun

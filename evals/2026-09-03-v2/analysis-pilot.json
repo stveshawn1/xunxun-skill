@@ -1,0 +1,33 @@
+{
+  "protocol": "v2.3",
+  "set": "pilot",
+  "pairs": 15,
+  "mean_factual_delta": 0.05555555555555556,
+  "overall_preferences": {
+    "xunxun": 9,
+    "baseline": 3,
+    "tie": 3
+  },
+  "xunxun_preference_rate_non_ties": 0.75,
+  "dimension_net_preferences": {
+    "confusion_resolution": 7,
+    "boundary_precision": 7,
+    "transfer_support": 11,
+    "cognitive_efficiency": 1
+  },
+  "baseline_complete_rate": 0.3333333333333333,
+  "non_tie_dimension_rate": 0.6111111111111112,
+  "judge_pairwise_overall_agreement": 0.5555555555555556,
+  "judge_pairwise_opposition_rate": 0.0,
+  "trigger_rate": 1.0,
+  "character_ratio": 1.0811677238933224,
+  "input_token_ratio": 1.1282344085910636,
+  "domain_fact_deltas": {
+    "pi-coding-agent": 0.0,
+    "openai-agents-sdk": 0.0,
+    "dsh": 0.19444444444444445,
+    "adaptive-immunity": 0.0,
+    "financial-statements": 0.08333333333333333
+  },
+  "pilot_gate": true
+}

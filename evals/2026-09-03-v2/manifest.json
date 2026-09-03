@@ -1,0 +1,23 @@
+{
+  "artifact_root_sha256": "77bb5776a92a7791eecabc3abb86c0ccf8610addc7529e0de0075e9e1b438494",
+  "skill_commit": "d49f0e9",
+  "protocol_commits": ["93fbe00", "5439b0c", "df06b3b", "bd57f62"],
+  "expected_analysis": {
+    "protocol": "v2.3",
+    "pairs": 45,
+    "mean_factual_delta": 0.03407407407407407,
+    "overall_preferences": {"xunxun": 19, "baseline": 12, "tie": 14},
+    "xunxun_preference_rate_non_ties": 0.6129032258064516,
+    "dimension_net_preferences": {
+      "confusion_resolution": 12,
+      "boundary_precision": 16,
+      "transfer_support": 18,
+      "cognitive_efficiency": -3
+    },
+    "judge_pairwise_opposition_rate": 0.05185185185185185,
+    "trigger_rate": 1.0,
+    "character_ratio": 1.093254117470106,
+    "input_token_ratio": 1.424836597811892,
+    "supports_general_one_turn_value": true
+  }
+}

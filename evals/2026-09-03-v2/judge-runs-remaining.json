@@ -1,0 +1,242 @@
+[
+  {
+    "item": "accounting-debit-credit",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "accounting-debit-credit",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "accounting-debit-credit",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "accounting-machine-purchase",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "accounting-machine-purchase",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "accounting-machine-purchase",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "agents-guardrail-tracing",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "agents-guardrail-tracing",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "agents-guardrail-tracing",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "agents-manager-handoff",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "agents-manager-handoff",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "agents-manager-handoff",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-model-visible-log",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-model-visible-log",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-model-visible-log",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-profile-bundle-patch",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-profile-bundle-patch",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-profile-bundle-patch",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "immune-clonal-selection",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "immune-clonal-selection",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "immune-clonal-selection",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "immune-tcell-activation",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "immune-tcell-activation",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "immune-tcell-activation",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "pi-extension-skill-template",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "pi-extension-skill-template",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "pi-extension-skill-template",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "pi-turn-step",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "pi-turn-step",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "pi-turn-step",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  }
+]

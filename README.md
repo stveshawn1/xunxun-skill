@@ -64,6 +64,8 @@ Use `evals/case-template.md` to run the same prompt in fresh, matched sessions w
 
 The first preregistered five-domain paired evaluation found no material one-turn improvement under highly structured prompts: both blinded judges rated all five pairs as ties, with a mean Xunxun delta of `+0.1/24` and `2.735×` cumulative input-token usage. This negative result, raw outputs, judgments, integrity manifest, and proposed next tests are preserved in [`evals/2026-09-03-v1/report.md`](evals/2026-09-03-v1/report.md).
 
+The corrected v2.3 evaluation used 15 independent natural novice questions, three generations per arm, item-specific fact checks, and three blinded judges. Xunxun was preferred in 19 of 31 non-tied pairs (61.3%), improved mean fact coverage by 3.4 percentage points, and used `1.425×` cumulative input tokens. Gains were strongly context-dependent—especially concentrated in financial statements—so the result supports modest practical value, not universal effectiveness. Full raw evidence and process amendments are in [`evals/2026-09-03-v2/report.md`](evals/2026-09-03-v2/report.md).
+
 ## Design boundary
 
 Xunxun deliberately has no term-by-term vocabulary database, account system, automatic Session-end hook, locking, or synchronization backend. It may repeat a small terminology bridge when evidence is unclear; that cost is preferable to maintaining stale vocabulary state. Cross-device or concurrent-writer support requires a separate consent, identity, and storage design.

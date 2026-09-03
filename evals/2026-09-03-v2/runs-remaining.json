@@ -1,0 +1,1180 @@
+{
+  "set": "remaining",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "replicates": 3,
+  "workers": 4,
+  "invalid_pairs": [],
+  "records": [
+    {
+      "item": "accounting-debit-credit",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 46760,
+        "cached_input_tokens": 38784,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 923,
+        "reasoning_output_tokens": 22
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-debit-credit",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50960,
+        "cached_input_tokens": 45312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1222,
+        "reasoning_output_tokens": 263
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-debit-credit",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30611,
+        "cached_input_tokens": 21504,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 698,
+        "reasoning_output_tokens": 86
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-debit-credit",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50919,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1066,
+        "reasoning_output_tokens": 156
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-debit-credit",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30613,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 804,
+        "reasoning_output_tokens": 111
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-debit-credit",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69672,
+        "cached_input_tokens": 61056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1384,
+        "reasoning_output_tokens": 206
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-machine-purchase",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30610,
+        "cached_input_tokens": 21504,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 469,
+        "reasoning_output_tokens": 0
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-machine-purchase",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69517,
+        "cached_input_tokens": 63360,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1019,
+        "reasoning_output_tokens": 104
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-machine-purchase",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30699,
+        "cached_input_tokens": 28544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 491,
+        "reasoning_output_tokens": 0
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-machine-purchase",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 67003,
+        "cached_input_tokens": 54016,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1049,
+        "reasoning_output_tokens": 192
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,260p' <skills>/xunxun/SKILL.md\"",
+        "/bin/zsh -lc \"sed -n '1,260p' <skills>/xunxun/SKILL.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-machine-purchase",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30615,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 584,
+        "reasoning_output_tokens": 45
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-machine-purchase",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69624,
+        "cached_input_tokens": 54144,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1083,
+        "reasoning_output_tokens": 127
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-guardrail-tracing",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30665,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 572,
+        "reasoning_output_tokens": 51
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-guardrail-tracing",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51040,
+        "cached_input_tokens": 39168,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 903,
+        "reasoning_output_tokens": 41
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-guardrail-tracing",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30670,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 550,
+        "reasoning_output_tokens": 91
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-guardrail-tracing",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51019,
+        "cached_input_tokens": 32640,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 950,
+        "reasoning_output_tokens": 160
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-guardrail-tracing",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30666,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 556,
+        "reasoning_output_tokens": 90
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-guardrail-tracing",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69854,
+        "cached_input_tokens": 61312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1006,
+        "reasoning_output_tokens": 153
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && printf '\\\\n---SOURCE---\\\\n' && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && printf '\\\\n---SOURCE---\\\\n' && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-manager-handoff",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30668,
+        "cached_input_tokens": 20352,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1123,
+        "reasoning_output_tokens": 289
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-manager-handoff",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69974,
+        "cached_input_tokens": 63360,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1781,
+        "reasoning_output_tokens": 368
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-manager-handoff",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30670,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1510,
+        "reasoning_output_tokens": 370
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-manager-handoff",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51054,
+        "cached_input_tokens": 45440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1453,
+        "reasoning_output_tokens": 210
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-manager-handoff",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 47154,
+        "cached_input_tokens": 41088,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1556,
+        "reasoning_output_tokens": 184
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-manager-handoff",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 70324,
+        "cached_input_tokens": 57088,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1945,
+        "reasoning_output_tokens": 420
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-model-visible-log",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 62923,
+        "cached_input_tokens": 56832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1410,
+        "reasoning_output_tokens": 452
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-model-visible-log",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 70401,
+        "cached_input_tokens": 63488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1475,
+        "reasoning_output_tokens": 223
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-model-visible-log",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30713,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 725,
+        "reasoning_output_tokens": 26
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-model-visible-log",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51311,
+        "cached_input_tokens": 38528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1395,
+        "reasoning_output_tokens": 350
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-model-visible-log",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 46575,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1012,
+        "reasoning_output_tokens": 196
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-model-visible-log",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 70259,
+        "cached_input_tokens": 54528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1712,
+        "reasoning_output_tokens": 367
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-profile-bundle-patch",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": false,
+      "usage": {
+        "input_tokens": 46212,
+        "cached_input_tokens": 40832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1060,
+        "reasoning_output_tokens": 239
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-profile-bundle-patch",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": false,
+      "usage": {
+        "input_tokens": 66650,
+        "cached_input_tokens": 58752,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1388,
+        "reasoning_output_tokens": 301
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,260p' <skills>/xunxun/SKILL.md\"",
+        "/bin/zsh -lc \"sed -n '1,260p' <skills>/xunxun/SKILL.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-profile-bundle-patch",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30741,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 787,
+        "reasoning_output_tokens": 152
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-profile-bundle-patch",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51820,
+        "cached_input_tokens": 43392,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1135,
+        "reasoning_output_tokens": 222
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-profile-bundle-patch",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30746,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 676,
+        "reasoning_output_tokens": 82
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-profile-bundle-patch",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 70464,
+        "cached_input_tokens": 61568,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1196,
+        "reasoning_output_tokens": 150
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-clonal-selection",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30538,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 642,
+        "reasoning_output_tokens": 168
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-clonal-selection",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50781,
+        "cached_input_tokens": 45312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 788,
+        "reasoning_output_tokens": 25
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/open-kimi-ppt/../xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/open-kimi-ppt/../xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-clonal-selection",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30521,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 606,
+        "reasoning_output_tokens": 98
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-clonal-selection",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69288,
+        "cached_input_tokens": 63104,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1126,
+        "reasoning_output_tokens": 145
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-clonal-selection",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30526,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 548,
+        "reasoning_output_tokens": 74
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-clonal-selection",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50714,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 918,
+        "reasoning_output_tokens": 116
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-tcell-activation",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30536,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 628,
+        "reasoning_output_tokens": 115
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-tcell-activation",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50737,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 878,
+        "reasoning_output_tokens": 194
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && printf '\\\\n---SOURCE---\\\\n' && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && printf '\\\\n---SOURCE---\\\\n' && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-tcell-activation",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 62163,
+        "cached_input_tokens": 56704,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 954,
+        "reasoning_output_tokens": 134
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-tcell-activation",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50847,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 977,
+        "reasoning_output_tokens": 184
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' source.md && sed -n '1,240p' <skills>/xunxun/SKILL.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' source.md && sed -n '1,240p' <skills>/xunxun/SKILL.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-tcell-activation",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 62118,
+        "cached_input_tokens": 56192,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 858,
+        "reasoning_output_tokens": 113
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-tcell-activation",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50872,
+        "cached_input_tokens": 45312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 967,
+        "reasoning_output_tokens": 149
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && printf '\\\\n--- SOURCE ---\\\\n' && sed -n '1,260p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && printf '\\\\n--- SOURCE ---\\\\n' && sed -n '1,260p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-extension-skill-template",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 46278,
+        "cached_input_tokens": 40832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 950,
+        "reasoning_output_tokens": 217
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-extension-skill-template",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69852,
+        "cached_input_tokens": 48128,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1294,
+        "reasoning_output_tokens": 212
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-extension-skill-template",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30624,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 667,
+        "reasoning_output_tokens": 97
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-extension-skill-template",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69888,
+        "cached_input_tokens": 54400,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1156,
+        "reasoning_output_tokens": 101
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-extension-skill-template",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30621,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 722,
+        "reasoning_output_tokens": 166
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-extension-skill-template",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51405,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1071,
+        "reasoning_output_tokens": 177
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,280p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-turn-step",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30617,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 471,
+        "reasoning_output_tokens": 150
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-turn-step",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50979,
+        "cached_input_tokens": 39168,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 924,
+        "reasoning_output_tokens": 246
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,240p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,240p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-turn-step",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30586,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 339,
+        "reasoning_output_tokens": 85
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-turn-step",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50863,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 541,
+        "reasoning_output_tokens": 38
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,240p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,240p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-turn-step",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30611,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 482,
+        "reasoning_output_tokens": 204
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-turn-step",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50878,
+        "cached_input_tokens": 36480,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 604,
+        "reasoning_output_tokens": 39
+      },
+      "triggered": true,
+      "skill_reads": [
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,240p' source.md\"",
+        "/bin/zsh -lc \"sed -n '1,240p' <skills>/xunxun/SKILL.md && sed -n '1,240p' source.md\""
+      ],
+      "unexpected_skill_reads": []
+    }
+  ]
+}

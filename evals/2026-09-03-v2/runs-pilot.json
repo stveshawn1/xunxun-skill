@@ -1,0 +1,580 @@
+{
+  "set": "pilot",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "replicates": 3,
+  "workers": 4,
+  "invalid_pairs": [],
+  "records": [
+    {
+      "item": "accounting-profit-cash",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30614,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 745,
+        "reasoning_output_tokens": 31
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-profit-cash",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50958,
+        "cached_input_tokens": 39040,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1467,
+        "reasoning_output_tokens": 458
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-profit-cash",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30617,
+        "cached_input_tokens": 21504,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 650,
+        "reasoning_output_tokens": 63
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-profit-cash",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50908,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1433,
+        "reasoning_output_tokens": 539
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-profit-cash",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30769,
+        "cached_input_tokens": 10752,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 689,
+        "reasoning_output_tokens": 114
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "accounting-profit-cash",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 70035,
+        "cached_input_tokens": 63360,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1474,
+        "reasoning_output_tokens": 467
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-agent-runner-session",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30692,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 825,
+        "reasoning_output_tokens": 255
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-agent-runner-session",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51736,
+        "cached_input_tokens": 45440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1346,
+        "reasoning_output_tokens": 238
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-agent-runner-session",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30692,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 724,
+        "reasoning_output_tokens": 21
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-agent-runner-session",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 86605,
+        "cached_input_tokens": 79488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1538,
+        "reasoning_output_tokens": 188
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-agent-runner-session",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30701,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 756,
+        "reasoning_output_tokens": 166
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "agents-agent-runner-session",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51767,
+        "cached_input_tokens": 45440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1452,
+        "reasoning_output_tokens": 292
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-service-lifecycle",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 70728,
+        "cached_input_tokens": 59392,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2035,
+        "reasoning_output_tokens": 561
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-service-lifecycle",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 70449,
+        "cached_input_tokens": 63616,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1608,
+        "reasoning_output_tokens": 214
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-service-lifecycle",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 229167,
+        "cached_input_tokens": 188544,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2544,
+        "reasoning_output_tokens": 667
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-service-lifecycle",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51171,
+        "cached_input_tokens": 47360,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1342,
+        "reasoning_output_tokens": 61
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-service-lifecycle",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": false,
+      "usage": {
+        "input_tokens": 108451,
+        "cached_input_tokens": 100480,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2239,
+        "reasoning_output_tokens": 817
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "dsh-service-lifecycle",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": false,
+      "usage": {
+        "input_tokens": 48527,
+        "cached_input_tokens": 35328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1578,
+        "reasoning_output_tokens": 614
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-memory",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30517,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 336,
+        "reasoning_output_tokens": 0
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-memory",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50850,
+        "cached_input_tokens": 45312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 929,
+        "reasoning_output_tokens": 200
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-memory",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30564,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 364,
+        "reasoning_output_tokens": 22
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-memory",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50742,
+        "cached_input_tokens": 43264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 746,
+        "reasoning_output_tokens": 18
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-memory",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30517,
+        "cached_input_tokens": 28032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 350,
+        "reasoning_output_tokens": 0
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "immune-memory",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69620,
+        "cached_input_tokens": 54016,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1025,
+        "reasoning_output_tokens": 165
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-session-tree",
+      "condition": "baseline",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30602,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 756,
+        "reasoning_output_tokens": 109
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-session-tree",
+      "condition": "xunxun",
+      "replicate": 1,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 50825,
+        "cached_input_tokens": 45312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 959,
+        "reasoning_output_tokens": 119
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-session-tree",
+      "condition": "baseline",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30622,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 775,
+        "reasoning_output_tokens": 144
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-session-tree",
+      "condition": "xunxun",
+      "replicate": 2,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 51616,
+        "cached_input_tokens": 28288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1054,
+        "reasoning_output_tokens": 174
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-session-tree",
+      "condition": "baseline",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 30623,
+        "cached_input_tokens": 25600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 744,
+        "reasoning_output_tokens": 139
+      },
+      "triggered": false,
+      "skill_reads": [],
+      "unexpected_skill_reads": []
+    },
+    {
+      "item": "pi-session-tree",
+      "condition": "xunxun",
+      "replicate": 3,
+      "returncode": 0,
+      "valid": true,
+      "reused": true,
+      "usage": {
+        "input_tokens": 69561,
+        "cached_input_tokens": 61056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1091,
+        "reasoning_output_tokens": 48
+      },
+      "triggered": true,
+      "skill_reads": [
+        "<skills>/xunxun/SKILL.md"
+      ],
+      "unexpected_skill_reads": []
+    }
+  ]
+}

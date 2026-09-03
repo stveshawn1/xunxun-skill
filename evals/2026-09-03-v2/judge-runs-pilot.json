@@ -1,0 +1,122 @@
+[
+  {
+    "item": "accounting-profit-cash",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "accounting-profit-cash",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "accounting-profit-cash",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "agents-agent-runner-session",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "agents-agent-runner-session",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "agents-agent-runner-session",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "dsh-service-lifecycle",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-service-lifecycle",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "dsh-service-lifecycle",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": false
+  },
+  {
+    "item": "immune-memory",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "immune-memory",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "immune-memory",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "pi-session-tree",
+    "judge": "gpt55",
+    "model": "gpt-5.5",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "pi-session-tree",
+    "judge": "sol",
+    "model": "gpt-5.6-sol",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  },
+  {
+    "item": "pi-session-tree",
+    "judge": "terra",
+    "model": "gpt-5.6-terra",
+    "returncode": 0,
+    "valid": true,
+    "reused": true
+  }
+]

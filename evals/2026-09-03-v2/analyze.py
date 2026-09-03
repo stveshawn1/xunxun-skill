@@ -18,14 +18,10 @@ def condition(label: str, a_condition: str, b_condition: str) -> str:
     return "tie" if label == "tie" else a_condition if label == "A" else b_condition
 
 
-def combine(left: str, right: str) -> str:
-    if left == right:
-        return left
-    if left == "tie":
-        return right
-    if right == "tie":
-        return left
-    return "tie"
+def combine(votes: list[str]) -> str:
+    counts = {label: votes.count(label) for label in ("baseline", "xunxun", "tie")}
+    winner = max(counts, key=counts.get)
+    return winner if counts[winner] >= 2 else "tie"
 
 
 def factual(value: dict, fact_count: int) -> float:
@@ -46,11 +42,14 @@ def main() -> None:
     factual_deltas: list[float] = []
     factual_by_domain: dict[str, list[float]] = {}
     baseline_complete: list[bool] = []
-    judge_overall_agreement: list[bool] = []
+    judge_pair_agreements: list[bool] = []
     baseline_chars = xunxun_chars = 0
 
     for item in items:
-        judgments = [json.loads((ROOT / "judgments" / judge / f"{item['id']}.json").read_text()) for judge in ("sol", "terra")]
+        judgments = [
+            json.loads((ROOT / "judgments" / judge / f"{item['id']}.json").read_text())
+            for judge in ("sol", "terra", "gpt55")
+        ]
         for replicate in range(1, 4):
             a_condition, b_condition = mapping(item["id"], replicate)
             scores = {"baseline": [], "xunxun": []}
@@ -74,16 +73,19 @@ def main() -> None:
                     dimension_votes[name].append(resolved)
                     raw_dimension_labels.append(resolved)
 
-            baseline = sum(scores["baseline"]) / 2
-            xunxun = sum(scores["xunxun"]) / 2
+            baseline = sum(scores["baseline"]) / len(judgments)
+            xunxun = sum(scores["xunxun"]) / len(judgments)
             delta = xunxun - baseline
             factual_deltas.append(delta)
             factual_by_domain.setdefault(item["domain"], []).append(delta)
             baseline_complete.append(all(complete_votes))
-            judge_overall_agreement.append(overall_votes[0] == overall_votes[1])
-            overall_preferences.append(combine(*overall_votes))
+            judge_pair_agreements.extend(
+                overall_votes[left] == overall_votes[right]
+                for left, right in ((0, 1), (0, 2), (1, 2))
+            )
+            overall_preferences.append(combine(overall_votes))
             for name in DIMENSIONS:
-                dimension_preferences[name].append(combine(*dimension_votes[name]))
+                dimension_preferences[name].append(combine(dimension_votes[name]))
 
             baseline_chars += len((ROOT / "results" / item["id"] / "baseline" / f"r{replicate}.md").read_text())
             xunxun_chars += len((ROOT / "results" / item["id"] / "xunxun" / f"r{replicate}.md").read_text())
@@ -107,7 +109,7 @@ def main() -> None:
     pilot_gate = (
         sum(baseline_complete) / len(baseline_complete) < 0.8
         and sum(value != "tie" for value in raw_dimension_labels) / len(raw_dimension_labels) >= 0.2
-        and sum(judge_overall_agreement) / len(judge_overall_agreement) >= 0.6
+        and sum(judge_pair_agreements) / len(judge_pair_agreements) >= 0.6
     )
     summary = {
         "protocol": "v2.1",
@@ -119,7 +121,7 @@ def main() -> None:
         "dimension_net_preferences": dimension_net,
         "baseline_complete_rate": sum(baseline_complete) / len(baseline_complete),
         "non_tie_dimension_rate": sum(value != "tie" for value in raw_dimension_labels) / len(raw_dimension_labels),
-        "judge_overall_agreement": sum(judge_overall_agreement) / len(judge_overall_agreement),
+        "judge_pairwise_overall_agreement": sum(judge_pair_agreements) / len(judge_pair_agreements),
         "trigger_rate": trigger_rate,
         "character_ratio": xunxun_chars / baseline_chars,
         "input_token_ratio": input_tokens["xunxun"] / input_tokens["baseline"],

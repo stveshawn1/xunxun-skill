@@ -48,6 +48,13 @@ def run_judge(item: dict, judge: str, model: str) -> dict:
     trace = ROOT / ".traces" / "judges" / judge / f"{item['id']}.jsonl"
     output.parent.mkdir(parents=True, exist_ok=True)
     trace.parent.mkdir(parents=True, exist_ok=True)
+    if output.is_file():
+        try:
+            existing = json.loads(output.read_text())
+            if len(existing["replicates"]) == 3:
+                return {"item": item["id"], "judge": judge, "model": model, "returncode": 0, "valid": True, "reused": True}
+        except (json.JSONDecodeError, KeyError, TypeError):
+            pass
     disabled = f'skills.config=[{{path={json.dumps(str(SKILL))},enabled=false}},{{path={json.dumps(str(OPENAI_DOCS))},enabled=false}}]'
     command = [
         "codex", "exec", "--ephemeral", "--ignore-user-config", "--ignore-rules",
@@ -75,7 +82,7 @@ def run_judge(item: dict, judge: str, model: str) -> dict:
             valid = len(result["replicates"]) == 3
         except (json.JSONDecodeError, KeyError, TypeError):
             valid = False
-    return {"item": item["id"], "judge": judge, "model": model, "returncode": completed.returncode, "valid": valid}
+    return {"item": item["id"], "judge": judge, "model": model, "returncode": completed.returncode, "valid": valid, "reused": False}
 
 
 def main() -> None:
@@ -90,7 +97,7 @@ def main() -> None:
         else {item["id"] for item in suite["items"]}
     )
     items = [item for item in suite["items"] if item["id"] in selected]
-    judges = {"sol": "gpt-5.6-sol", "terra": "gpt-5.6-terra"}
+    judges = {"sol": "gpt-5.6-sol", "terra": "gpt-5.6-terra", "gpt55": "gpt-5.5"}
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         futures = [executor.submit(run_judge, item, name, model) for item in items for name, model in judges.items()]
         records = [future.result() for future in as_completed(futures)]

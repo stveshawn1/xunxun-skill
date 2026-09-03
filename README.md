@@ -9,6 +9,7 @@ Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases th
 - **Concept preset** — definitions, distinctions, minimal examples, value, and limits.
 - **Reference preset** — place a file or artifact in its system before reading critical regions.
 - **Codebase preset** — follow entrypoints, natural seams, execution paths, state, and lifecycle before line-level code.
+- **Progressive depth** — start with the smallest complete explanation and add layers only when the learner's goal or later behavior requires them.
 - **Terminology bridging** — add a minimal intuitive gloss when the learner has not demonstrated a required specialized term.
 - **Adaptive learning** — use a contextual-bandit-inspired loop to select scoped treatment deltas, infer fit from ongoing behavior, and update compact private state.
 - **Promotion checkpoints** — when a durable preference is supported, explain the proposed local update and ask whether to retain it.
@@ -47,8 +48,8 @@ xunxun-skill/
 │   ├── terminology-bridging.md
 │   ├── comparison-protocol.md
 │   ├── local-state.md
-│   ├── validated-principles.md
 │   ├── local-state-templates.md
+│   ├── teaching-principles.md
 │   └── quality-scorecard.md
 ├── evals/
 │   └── case-template.md
@@ -56,7 +57,7 @@ xunxun-skill/
     └── comparison-template.md
 ```
 
-The repository contains shared rules and templates. Cross-project preferences live in `$XUNXUN_HOME/profile.md`, or `~/.xunxun/profile.md` by default. Project learning state lives in `<project-root>/.xunxun/profile.md`; Git repositories exclude `.xunxun/` locally through `.git/info/exclude`. Current Session state remains ephemeral.
+The repository contains shared rules and templates. Cross-project preferences live in `$XUNXUN_HOME/profile.md`, or `~/.xunxun/profile.md` by default. Project learning state is opt-in and lives in `<project-root>/.xunxun/profile.md`; Git repositories keep it private through local exclusion. Current Session state remains ephemeral.
 
 ## Compare with and without Xunxun
 

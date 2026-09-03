@@ -17,7 +17,7 @@ current Session                # transient working state
 
 Use non-empty `$XUNXUN_HOME` instead of `~/.xunxun` when explicitly configured.
 
-Both profile files are private local state. Never commit, push, upload, or use them as telemetry. Before creating a project profile in a Git repository, add `.xunxun/` to that repository's `.git/info/exclude`; do not modify its shared `.gitignore` unless asked.
+Both profile files are private local state. Never commit, push, upload, or use them as telemetry. Reading an existing profile does not authorize unrelated writes.
 
 If a location is unreadable or unwritable, continue with the remaining layers. Do not block teaching or claim that an update persisted.
 
@@ -30,6 +30,19 @@ For a project-backed lesson:
 3. read `<project-root>/.xunxun/profile.md` when it exists.
 
 Do not search unrelated parent directories or a central project index. Locality is the identity: the profile next to the project belongs to that project.
+
+## Opt in and protect project state
+
+Do not create a project profile during an ordinary explanation. Ask before first creation. Once the learner opts in and the file exists, compact milestone updates may continue during later lessons unless the learner withdraws that permission.
+
+Before any project-profile write in a Git repository:
+
+1. check whether `.xunxun/` is already tracked;
+2. if tracked, do not write private state there; continue with Session state and explain the conflict when persistence matters;
+3. if untracked, exclude `.xunxun/` through the repository's local `.git/info/exclude`, not its shared `.gitignore`;
+4. verify the profile remains ignored before writing.
+
+For a non-Git project, disclose that no version-control exclusion protects the file and ask before creation.
 
 ## What each layer owns
 
@@ -57,7 +70,7 @@ The narrower layer wins only where it contains relevant evidence. An unfamiliar 
 At a natural milestone:
 
 - keep short-lived observations in the Session;
-- update the project profile when route, established understanding, open gaps, or a project-only adaptation must survive another Session;
+- update an opted-in project profile when route, established understanding, open gaps, or a project-only adaptation must survive another Session;
 - use a promotion checkpoint before adding a consequential cross-project preference to the global profile;
 - replace or consolidate old conclusions instead of appending a chronological diary.
 

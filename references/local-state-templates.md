@@ -20,6 +20,8 @@
 ```markdown
 # Project Learning Profile
 
+- Repository revision: <commit, or not applicable>
+
 ## Route
 - Current position: <where the learner stopped>
 - Next step: <next exact module, file, or concept>

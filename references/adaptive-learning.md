@@ -159,7 +159,7 @@ If the learner confirms, persist locally and promote the state. If they narrow i
 Follow `references/local-state.md`:
 
 - keep low-confidence experiments and proximal observations in the current Session;
-- write an active treatment to the project's `.xunxun/profile.md` only when it must survive into another Session;
+- write an active treatment to an opted-in project `.xunxun/profile.md` only when it must survive into another Session;
 - after a promotion checkpoint, write cross-project stable/contextual preferences to the global learner profile;
 - keep project-only preferences and evidence in the private project profile.
 
@@ -181,7 +181,7 @@ Ask about the actual uncertainty, for example “Are you stuck on why the object
 
 ## Privacy and authorization
 
-- Cross-project personal preferences remain in the global `.xunxun/profile.md`. Project-personal state remains in the project's `.xunxun/profile.md`, with `.xunxun/` excluded through `.git/info/exclude` in Git repositories.
+- Cross-project personal preferences remain in the global `.xunxun/profile.md`. Project-personal state requires opt-in and remains in the project's `.xunxun/profile.md`; follow `references/local-state.md` before writing it.
 - Never commit, push, upload, or create telemetry from private state.
 - Never infer stable identity from account or machine metadata.
 - Shared principles contain no learner identifiers or raw personal examples.

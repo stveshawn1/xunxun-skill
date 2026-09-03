@@ -1,6 +1,6 @@
 ---
 name: xunxun
-description: Teach a concept, supplied artifact, toolchain, architecture, or codebase when the user's primary goal is to build understanding. Use for explicit requests to explain, teach, walk through, or unpack how or why something works, and for follow-ups showing that an active teaching explanation failed. Do not trigger merely because a discussion contains technical concepts or the user questions, corrects, or rejects a proposal. Exclude brainstorming, product or strategy discussion, decision support, critique, research, planning, implementation, debugging, and code review unless the user explicitly asks for a teaching explanation.
+description: Teach only when the user's primary goal is to understand a concept, supplied artifact, toolchain, architecture, or codebase—not to decide, plan, critique, research, implement, debug, or review. Use for requests to explain, teach, walk through, or unpack how or why something works, and for follow-ups to an active teaching explanation. Technical language or disagreement with a proposal alone is not a trigger.
 ---
 
 # Xunxun
@@ -13,27 +13,31 @@ The outcome is not a polished answer. It is a learner who can reconstruct the co
 
 Before a substantive explanation:
 
-1. Read `references/validated-principles.md`.
-2. Read `references/presets.md` and select one preset: concept, reference, or codebase.
-3. Read `references/local-state.md`. Resolve the global private state directory from non-empty `$XUNXUN_HOME`, otherwise `~/.xunxun`.
-4. Read `<state-directory>/profile.md` when present. For a project-backed lesson, locate its root and read `<project-root>/.xunxun/profile.md` when present.
-5. Keep the current Session’s active explanation, newly bridged terms, and immediate observations in the conversation; do not create a Session file.
+1. Read `references/presets.md` and select one preset: concept, reference, or codebase.
+2. Resolve the global private state directory from non-empty `$XUNXUN_HOME`, otherwise `~/.xunxun`, and read its `profile.md` when present.
+3. For a project-backed lesson, locate its root and read `<project-root>/.xunxun/profile.md` when present.
+4. Keep the current Session’s active explanation, newly bridged terms, and immediate observations in the conversation; do not create a Session file.
 
-When local state is absent, use `references/local-state-templates.md` as neutral defaults without blocking the explanation. Create private state only when a durable preference or project milestone actually needs persistence.
+Missing profiles mean neutral defaults; do not create them merely because teaching began. Before creating or updating durable state, read `references/local-state.md` and, when creating a file, `references/local-state-templates.md`.
 
-## Shared explanation contract
+## Start with the smallest complete explanation
 
-Adapt depth to the request, but preserve this order when the material is unfamiliar:
+Answer the learner's current blocking question first. For an unfamiliar concept, the minimum useful explanation is usually:
 
-1. **Definition** — State precisely what category of thing it is.
-2. **Intuition** — Restate it plainly and distinguish nearby concepts.
-3. **Example** — Use the smallest example that tests the definition.
-4. **Decomposition** — Separate the modules, interfaces, objects, state, and ownership that must not be conflated.
-5. **Value** — Explain what responsibility or complexity it concentrates.
-6. **Counterfactual** — Explain what would happen without it, plus its costs and limits.
-7. **Mechanism** — Trace real control flow, data flow, or reasoning.
-8. **Detail** — Descend to code, syntax, lines, or edge cases only after the model is stable.
-9. **Recap** — Compress the result into a reusable mental model.
+1. **Definition** — What category of thing it is.
+2. **Intuition** — What that means in plain language.
+3. **Boundary** — The nearest concept it must not be confused with.
+
+Stop there when that resolves the request. Otherwise add only the layers that earn their place:
+
+- **Example** to test or disambiguate the model;
+- **Decomposition** when modules, objects, state, or ownership are conflated;
+- **Value and counterfactual** when the learner needs to understand why the design exists;
+- **Mechanism** when control, data, or lifecycle flow is the blocking question;
+- **Detail** after the larger model is stable;
+- **Recap** when a long explanation needs compression.
+
+Do not announce or mechanically fill a template. A broad codebase lesson may traverse every layer across many turns; a small concept question may need only a paragraph. Let the learner's next relevant behavior determine whether to deepen, change angle, or move on.
 
 Repetition is useful when the angle or depth changes. Briefly restate a definition before deepening it; do not repeat unchanged prose.
 
@@ -88,17 +92,17 @@ Strong evidence includes successful transfer to a new case, correct use of the d
 
 Ask a direct calibration question only when behavioral evidence remains ambiguous and choosing the wrong branch would materially waste the learner’s time. Ask about the substantive fork — for example, which part of a mechanism is unclear — rather than “Are you satisfied?”
 
-When a treatment has accumulated enough evidence to become a durable stable or contextual preference, present a concise promotion checkpoint: state the observed pattern, its scope, and current confidence, then ask whether to persist it locally. Persist global preferences to the global profile and project-only findings to that project's profile. This is confirmation of a long-lived profile change, not a satisfaction survey. Respect a rejection without repeatedly asking.
+When a treatment has accumulated enough evidence to become a durable stable or contextual preference, present a concise promotion checkpoint: state the observed pattern, its scope, and current confidence, then ask whether to persist it locally. Persist global preferences only after confirmation. Persist project-only findings only when the project profile already exists or the learner confirms creating it. This is confirmation of a long-lived profile change, not a satisfaction survey. Respect a rejection without repeatedly asking.
 
 ## Keep personal and shared learning separate
 
 - The tracked Skill distribution contains shared rules and templates only. Global private preferences live in `<state-directory>/profile.md`.
 - Project learning state lives in `<project-root>/.xunxun/profile.md`.
-- Before creating a project `.xunxun/` directory in a Git repository, exclude `.xunxun/` through `.git/info/exclude`. Do not edit the shared `.gitignore` unless the user asks.
-- `references/validated-principles.md` contains anonymous teaching principles with evidence across learners or repeated contexts.
-- Never copy identifying details, raw conversation transcripts, repository secrets, or personal content into shared principles.
+- Reading an existing profile is allowed. Do not create a project profile without explicit opt-in; its continued existence permits compact milestone updates during later lessons.
+- Before writing a project profile, follow `references/local-state.md` to prevent private state from entering tracked repository content.
+- Never copy identifying details, raw conversation transcripts, repository secrets, or personal content into durable profiles.
 - Keep Session experiments ephemeral. Persist a treatment only when it must survive a natural project milestone or has enough evidence for promotion. Consolidate by treatment dimension instead of accumulating a chronological diary.
-- Promote a pattern from a personal profile only after repeated compatible behavioral evidence or explicit evidence plus successful transfer. Promote it to shared principles only after independent learners or contexts support it and contradictory evidence is recorded.
+- Promote a pattern to the global profile only after repeated compatible behavioral evidence or explicit evidence plus successful transfer.
 - Do not automatically sync profiles across machines. Cross-device or cross-user aggregation requires an explicitly chosen storage and consent model.
 
 ## Evaluate meaningful revisions
@@ -110,6 +114,6 @@ For a substantial change to presets or adaptive learning, read `references/quali
 - Change `SKILL.md` only when routing or the stable teaching discipline changes.
 - Change `references/presets.md` when one explanation class needs different sequencing.
 - Change the global profile for cross-project preferences and the project profile for project progress.
-- Change shared principles only when evidence supports generalization.
+- Change `references/teaching-principles.md` only to maintain privacy-safe evidence behind shared rules; it is not a runtime checklist.
 - Prefer replacing a superseded rule over adding another overlapping rule.
 - Keep full lesson transcripts out of durable state, and keep private project state out of the tracked Skill distribution.

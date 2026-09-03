@@ -19,6 +19,8 @@ Run at least these cases:
 11. one cross-Session continuation that restores a compact project profile without replaying transient Session notes.
 12. one overloaded term used in two projects or domains, testing that one project's profile does not leak into another.
 13. one negative-routing case where the learner questions or rejects a product, strategy, or implementation proposal without asking to learn; Xunxun must not activate.
+14. one natural underspecified novice question that does not request a mental model, causal chain, distinctions, or examples by name.
+15. one independent concept item per fresh Session, plus a separate scripted multi-turn case where accumulation is intentional and matched across conditions.
 
 Where independent agents are available and authorized, one agent teaches and another scores from the request, response, relevant evidence, and this rubric.
 
@@ -41,3 +43,5 @@ Where independent agents are available and authorized, one agent teaches and ano
 A revision passes when it scores at least 80/100, has no zero in definition accuracy, vocabulary scaffolding, evidence/honesty, behavioral inference, or causal humility, and performs no worse than the previous version on any scenario. Preserve the previous version when the candidate regresses.
 
 Self-scoring is a development hint, not validation. Record concrete failures and change only rules supported by them.
+
+Before a large run, pilot the rubric. If most untreated outputs already score near the maximum, revise the cases or item-specific checks before spending the full evaluation budget.

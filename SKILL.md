@@ -13,12 +13,20 @@ The outcome is not a polished answer. It is a learner who can reconstruct the co
 
 Before a substantive explanation:
 
-1. Read `references/presets.md` and select one preset: concept, reference, or codebase.
+1. Select the narrowest teaching route below: concept, reference, or codebase.
 2. Resolve the global private state directory from non-empty `$XUNXUN_HOME`, otherwise `~/.xunxun`, and read its `profile.md` when present.
 3. For a project-backed lesson, locate its root and read `<project-root>/.xunxun/profile.md` when present.
 4. Keep the current Session’s active explanation, newly bridged terms, and immediate observations in the conversation; do not create a Session file.
 
 Missing profiles mean neutral defaults; do not create them merely because teaching began. Before creating or updating durable state, read `references/local-state.md` and, when creating a file, `references/local-state-templates.md`.
+
+## Choose the teaching route
+
+- **Concept** — define the term or mechanism, give a plain intuition, and separate its nearest confusing neighbor. Add an example, formalism, history, or implementation only when it resolves the actual question.
+- **Reference** — first place the supplied code, file, document, diagram, or error in its surrounding system. Then inspect meaningful regions, producers, consumers, state, side effects, and one real path; read only critical regions line by line.
+- **Codebase** — begin with a compact system map and proposed route from real entrypoints and authoritative state. Across turns, follow one main control/data/lifecycle path from subsystem to runtime objects and critical code, preserving the route across prerequisite detours.
+
+A concept discovered inside a file temporarily uses the concept route, then reconnects to the file. A file inside a codebase uses the reference route inside the larger codebase map. These are depth choices, not rigid output templates.
 
 ## Start with the smallest complete explanation
 
@@ -38,6 +46,8 @@ Stop there when that resolves the request. Otherwise add only the layers that ea
 - **Recap** when a long explanation needs compression.
 
 Do not announce or mechanically fill a template. A broad codebase lesson may traverse every layer across many turns; a small concept question may need only a paragraph. Let the learner's next relevant behavior determine whether to deepen, change angle, or move on.
+
+When the request already specifies useful teaching structure, preserve it and add only what is missing. Do not restate the user's scaffolding as extra sections merely to make Xunxun visible.
 
 Repetition is useful when the angle or depth changes. Briefly restate a definition before deepening it; do not repeat unchanged prose.
 
@@ -72,6 +82,8 @@ Read `references/terminology-bridging.md` when terminology density is high or wh
 - For a standalone concept, verify unstable or specialized claims when needed; do not manufacture code evidence.
 - For supplied files or references, read the material and explain its role before its lines.
 - For a codebase, inspect instructions, entrypoints, callers, state owners, and failure paths. Link exact files and tight line positions.
+- When an applicable domain or source Skill is available, use it to establish facts and apply Xunxun to teaching those facts; do not replace source-specialist discipline.
+- Intuition may simplify wording, not ontology: preserve the source's category, ownership, lifecycle, and guarantees. Label analogy and inference instead of silently turning an npm package into “a group of patches” or an observation into a guarantee.
 - Treat documentation as intent and implementation as current behavior; surface disagreement.
 - Do not claim runtime validation from types alone or certainty beyond the available evidence.
 
@@ -112,7 +124,6 @@ For a substantial change to presets or adaptive learning, read `references/quali
 ## Maintain the Skill
 
 - Change `SKILL.md` only when routing or the stable teaching discipline changes.
-- Change `references/presets.md` when one explanation class needs different sequencing.
 - Change the global profile for cross-project preferences and the project profile for project progress.
 - Change `references/teaching-principles.md` only to maintain privacy-safe evidence behind shared rules; it is not a runtime checklist.
 - Prefer replacing a superseded rule over adding another overlapping rule.

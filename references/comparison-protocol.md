@@ -2,6 +2,14 @@
 
 Compare the same explanation task with and without Xunxun while keeping other conditions as similar as practical. The goal is transparent human review, not a claim of causal proof from one pair.
 
+Choose one estimand before writing prompts:
+
+- **Pure Skill effect** — disable unrelated optional Skills in both arms; only Xunxun availability differs.
+- **Ecosystem effect** — preserve the normal Skill set and treat routing or composition changes as part of the outcome.
+- **Longitudinal effect** — give both arms the same scripted follow-ups; state accumulation inside one sequence is intentional, while sequences start fresh.
+
+Do not average these lanes into one result.
+
 ## Conditions
 
 - **Baseline** — the agent receives the task and source material but cannot read Xunxun, its references, or global/project `.xunxun/profile.md` files.
@@ -16,6 +24,10 @@ Keep fixed where possible:
 - prompt wording and attachments;
 - fresh-session context window;
 - run date range.
+
+Use one natural user question per independent item. Do not bundle several concepts into one answer unless the bundled experience itself is under test. Use raw or realistically supplied context; do not encode Xunxun's desired definitions, distinctions, causal chain, examples, or transfer language into the Baseline prompt.
+
+Model sampling is nondeterministic. Repeat important items enough to observe direction and variance; use a small pilot first to verify that prompts and grading leave headroom before scaling the run.
 
 Use separate fresh sessions so one run cannot learn from the other. If model or environment drift cannot be controlled, disclose it.
 
@@ -41,6 +53,8 @@ Define the learning objective and rubric before revealing which output used Xunx
 - ability to support the likely next question.
 
 Record concrete evidence, not only “A feels better.” One pair is illustrative. Repeat important cases or vary the topic before generalizing.
+
+Score each independent question against a question-specific factual checklist before applying general teaching-quality dimensions. Include a transfer or misconception check when the claimed outcome is learner understanding, not merely polished prose. Treat saturated scores as a failed measurement design, not proof that both conditions are perfect.
 
 ## Public demo promotion
 

@@ -43,7 +43,6 @@ xunxun-skill/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── references/
-│   ├── presets.md
 │   ├── adaptive-learning.md
 │   ├── terminology-bridging.md
 │   ├── comparison-protocol.md

@@ -10,12 +10,23 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["replicate", "a", "b", "preferred", "rationale"],
+        "required": ["replicate", "a", "b", "comparisons", "rationale"],
         "properties": {
           "replicate": {"type": "integer", "minimum": 1, "maximum": 3},
           "a": {"$ref": "#/$defs/score"},
           "b": {"$ref": "#/$defs/score"},
-          "preferred": {"type": "string", "enum": ["A", "B", "tie"]},
+          "comparisons": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["confusion_resolution", "boundary_precision", "transfer_support", "cognitive_efficiency", "overall"],
+            "properties": {
+              "confusion_resolution": {"$ref": "#/$defs/preference"},
+              "boundary_precision": {"$ref": "#/$defs/preference"},
+              "transfer_support": {"$ref": "#/$defs/preference"},
+              "cognitive_efficiency": {"$ref": "#/$defs/preference"},
+              "overall": {"$ref": "#/$defs/preference"}
+            }
+          },
           "rationale": {"type": "string"}
         }
       }
@@ -26,15 +37,15 @@
     "score": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["facts", "forbidden", "intuition", "boundary", "mechanism", "novice_relevance"],
+      "required": ["facts", "forbidden"],
       "properties": {
         "facts": {"type": "array", "items": {"type": "boolean"}},
-        "forbidden": {"type": "array", "items": {"type": "boolean"}},
-        "intuition": {"type": "integer", "minimum": 0, "maximum": 2},
-        "boundary": {"type": "integer", "minimum": 0, "maximum": 2},
-        "mechanism": {"type": "integer", "minimum": 0, "maximum": 2},
-        "novice_relevance": {"type": "integer", "minimum": 0, "maximum": 2}
+        "forbidden": {"type": "array", "items": {"type": "boolean"}}
       }
+    },
+    "preference": {
+      "type": "string",
+      "enum": ["A", "B", "tie"]
     }
   }
 }

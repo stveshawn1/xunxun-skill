@@ -27,7 +27,7 @@ def mapping(item_id: str, replicate: int) -> tuple[str, str]:
 def prompt_for(item: dict) -> str:
     sections = [
         "You are a blinded evaluator. Use only the supplied source and checklist. Do not use tools or guess which condition produced an answer.",
-        "For each A/B answer, return one boolean per required fact and forbidden inference, then score intuition, boundary clarity, mechanism, and novice relevance from 0 to 2. Prefer A or B only for a meaningful overall teaching advantage; otherwise choose tie. Return only schema-valid JSON.",
+        "For each A/B answer, return one boolean per required fact and forbidden inference. Then compare A/B directly on whether it resolves the expressed confusion, preserves the conceptual boundary, supports transfer to a new example, and does so with lower cognitive cost. Give an overall A/B/tie choice. Use tie freely; fluency or extra length alone is not an advantage. Return only schema-valid JSON.",
         f"ITEM: {item['id']}",
         f"NATURAL USER QUESTION:\n{item['prompt']}",
         f"SOURCE:\n{(ROOT / 'sources' / item['source']).read_text()}",

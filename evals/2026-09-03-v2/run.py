@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -17,10 +18,12 @@ ROOT = Path(__file__).parent
 REPO = ROOT.parents[1]
 SKILL = REPO / "SKILL.md"
 OPENAI_DOCS = SKILL.parent.parent / ".system" / "openai-docs" / "SKILL.md"
+OPEN_KNOWLEDGE = SKILL.parent.parent / "open-knowledge-discovery" / "SKILL.md"
+OTHER_USER_SKILLS = [path for path in SKILL.parent.parent.glob("*/SKILL.md") if path != SKILL]
 
 
 def config(disabled: list[Path]) -> str:
-    rows = ",".join(f'{{path={json.dumps(str(path))},enabled=false}}' for path in disabled if path.exists())
+    rows = ",".join(f'{{path={json.dumps(str(path))},enabled=false}}' for path in dict.fromkeys(disabled) if path.exists())
     return f"skills.config=[{rows}]"
 
 
@@ -36,20 +39,21 @@ def parse_trace(text: str) -> tuple[dict, list[str]]:
             usage = event.get("usage", {})
         item = event.get("item", {})
         if item.get("type") == "command_execution" and "SKILL.md" in item.get("command", ""):
-            skill_reads.append(item["command"])
-    return usage, skill_reads
+            skill_reads.extend(re.findall(r"/[^\s\"']*?/SKILL\.md", item["command"]))
+    return usage, list(dict.fromkeys(skill_reads))
 
 
 def sanitize(command: str) -> str:
-    return command.replace(str(SKILL), "<xunxun-skill>/SKILL.md").replace(
-        str(OPENAI_DOCS), "<openai-docs-skill>/SKILL.md"
-    )
+    return command.replace(str(SKILL.parent.parent), "<skills>")
+
+
+def is_xunxun_read(command: str) -> bool:
+    return "/xunxun/SKILL.md" in command or "../xunxun/SKILL.md" in command
 
 
 def record(item: dict, condition: str, replicate: int, returncode: int, answer: Path, trace_text: str, reused: bool) -> dict:
     usage, skill_reads = parse_trace(trace_text)
-    allowed = [] if condition == "baseline" else [str(SKILL)]
-    unexpected = [read for read in skill_reads if not any(path in read for path in allowed)]
+    unexpected = [read for read in skill_reads if not (condition == "xunxun" and is_xunxun_read(read))]
     valid = returncode == 0 and answer.is_file() and answer.stat().st_size > 0 and bool(usage) and not unexpected
     return {
         "item": item["id"],
@@ -59,7 +63,7 @@ def record(item: dict, condition: str, replicate: int, returncode: int, answer: 
         "valid": valid,
         "reused": reused,
         "usage": usage,
-        "triggered": any(str(SKILL) in read for read in skill_reads),
+        "triggered": any(is_xunxun_read(read) for read in skill_reads),
         "skill_reads": [sanitize(read) for read in skill_reads],
         "unexpected_skill_reads": [sanitize(read) for read in unexpected],
     }
@@ -76,7 +80,7 @@ def run_one(item: dict, condition: str, replicate: int, workdir: Path, neutral: 
         if existing["valid"]:
             return existing
 
-    disabled = [OPENAI_DOCS]
+    disabled = [OPENAI_DOCS, OPEN_KNOWLEDGE, *OTHER_USER_SKILLS]
     if condition == "baseline":
         disabled.append(SKILL)
 

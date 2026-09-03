@@ -43,6 +43,7 @@ def main() -> None:
     factual_by_domain: dict[str, list[float]] = {}
     baseline_complete: list[bool] = []
     judge_pair_agreements: list[bool] = []
+    judge_pair_oppositions: list[bool] = []
     baseline_chars = xunxun_chars = 0
 
     for item in items:
@@ -83,6 +84,10 @@ def main() -> None:
                 overall_votes[left] == overall_votes[right]
                 for left, right in ((0, 1), (0, 2), (1, 2))
             )
+            judge_pair_oppositions.extend(
+                {overall_votes[left], overall_votes[right]} == {"baseline", "xunxun"}
+                for left, right in ((0, 1), (0, 2), (1, 2))
+            )
             overall_preferences.append(combine(overall_votes))
             for name in DIMENSIONS:
                 dimension_preferences[name].append(combine(dimension_votes[name]))
@@ -109,10 +114,10 @@ def main() -> None:
     pilot_gate = (
         sum(baseline_complete) / len(baseline_complete) < 0.8
         and sum(value != "tie" for value in raw_dimension_labels) / len(raw_dimension_labels) >= 0.2
-        and sum(judge_pair_agreements) / len(judge_pair_agreements) >= 0.6
+        and sum(judge_pair_oppositions) / len(judge_pair_oppositions) <= 0.1
     )
     summary = {
-        "protocol": "v2.1",
+        "protocol": "v2.3",
         "set": args.set,
         "pairs": len(factual_deltas),
         "mean_factual_delta": sum(factual_deltas) / len(factual_deltas),
@@ -122,6 +127,7 @@ def main() -> None:
         "baseline_complete_rate": sum(baseline_complete) / len(baseline_complete),
         "non_tie_dimension_rate": sum(value != "tie" for value in raw_dimension_labels) / len(raw_dimension_labels),
         "judge_pairwise_overall_agreement": sum(judge_pair_agreements) / len(judge_pair_agreements),
+        "judge_pairwise_opposition_rate": sum(judge_pair_oppositions) / len(judge_pair_oppositions),
         "trigger_rate": trigger_rate,
         "character_ratio": xunxun_chars / baseline_chars,
         "input_token_ratio": input_tokens["xunxun"] / input_tokens["baseline"],

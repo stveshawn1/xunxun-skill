@@ -63,6 +63,8 @@ The repository contains shared rules and templates. Cross-project preferences li
 
 Use `evals/case-template.md` to run the same prompt in fresh, matched sessions without and with Xunxun. Record unedited outputs and human review before drawing a conclusion. Promote only privacy-safe, representative reviewed cases into `examples/` using `examples/comparison-template.md`.
 
+The first preregistered five-domain paired evaluation found no material one-turn improvement under highly structured prompts: both blinded judges rated all five pairs as ties, with a mean Xunxun delta of `+0.1/24` and `2.735×` cumulative input-token usage. This negative result, raw outputs, judgments, integrity manifest, and proposed next tests are preserved in [`evals/2026-09-03-v1/report.md`](evals/2026-09-03-v1/report.md).
+
 ## Design boundary
 
 Xunxun deliberately has no term-by-term vocabulary database, account system, automatic Session-end hook, locking, or synchronization backend. It may repeat a small terminology bridge when evidence is unclear; that cost is preferable to maintaining stale vocabulary state. Cross-device or concurrent-writer support requires a separate consent, identity, and storage design.

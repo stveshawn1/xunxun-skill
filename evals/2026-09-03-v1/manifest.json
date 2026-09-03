@@ -1,0 +1,37 @@
+{
+  "skill_commit": "ad434f7",
+  "preregistered_commit": "fc0dc18",
+  "cases": {
+    "pi-coding-agent": {"a": "xunxun", "b": "baseline"},
+    "openai-agents-sdk": {"a": "xunxun", "b": "baseline"},
+    "dsh": {"a": "baseline", "b": "xunxun"},
+    "adaptive-immunity": {"a": "baseline", "b": "xunxun"},
+    "financial-statements": {"a": "baseline", "b": "xunxun"}
+  },
+  "sha256": {
+    "pi-coding-agent/prompt.md": "9e97fa56efba277eee7a1ac5e1b6eb7ad6c0c678f4c3296b1174ea6b26686ad1",
+    "pi-coding-agent/baseline.md": "b8d2f7731e621658c525337dbea5fd8a8947a5f686890eef2aaea8bcef7b8b8b",
+    "pi-coding-agent/xunxun.md": "16e06c0dfd0a817f00a8fe84686c755e289c7ddb4ef9a7b14641ee97da537205",
+    "openai-agents-sdk/prompt.md": "79d5511efdea3da436428856ce438c545380d874affe4f28ce54a32251375206",
+    "openai-agents-sdk/baseline.md": "e0e9bff369b221d1220953f2bef756e161b72a4c2c870942b7c51aa33a063fa6",
+    "openai-agents-sdk/xunxun.md": "805f0be4b2cc8fe5fcab9cbbf9fae34f8a01fb7e3f5c117cd311c5a296b898a6",
+    "dsh/prompt.md": "f3100133e0ee19608bef97873a62c8373cca36b61e553f5bab2a23ac41455541",
+    "dsh/baseline.md": "e3c2d19898d609c2b4b0e35ccec060323b661bdf80b3c11040dcb62b72d5ca13",
+    "dsh/xunxun.md": "d3c8e8ed3c73f04fae56644a888df6a24b2d5268d3330e3049709a1c5c438ba6",
+    "adaptive-immunity/prompt.md": "d944521728738d24ba558b46f2a5cd2bbadefb75893aa5fe433b4b5e29b5212a",
+    "adaptive-immunity/baseline.md": "1bc760a978a3695761de7b90894136009be71832818302d95955040ce0a3328c",
+    "adaptive-immunity/xunxun.md": "3830aed7621477714d71ae290f33298e4183939b5bb4311e78465fc7aaa4a51c",
+    "financial-statements/prompt.md": "2a43049348a0df1258061cff52164afae0cd58c23bf53b29a6d979be4e2ddcdc",
+    "financial-statements/baseline.md": "cfaa88d3a6a46a9007168114f86fcd7e9c614dead249393096ab5a98259bf871",
+    "financial-statements/xunxun.md": "8cee2a446ce94a82895feb5a8a299c1a7c48cf47ab105e625cd7952ddd13b607",
+    "judges/sol.json": "c6a948491c7da23d25729fd44e53a1b3872dbf68ea06a7d908fe46645d84d7f9",
+    "judges/terra.json": "52fb0d001b34761b5dd5bceb9e65a6b0f004186b411e89019def5aa901342042",
+    "judges/schema.json": "ca33bb1a947442d9ca5bfd082871d3cf40231543de66a0ac015ab3c31c5403e0"
+  },
+  "thresholds": {
+    "minimum_wins": 3,
+    "minimum_mean_delta": 2.0,
+    "maximum_accuracy_loss": 1.0,
+    "maximum_character_ratio": 1.6
+  }
+}

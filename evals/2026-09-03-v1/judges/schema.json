@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cases", "cross_case_observations"],
+  "properties": {
+    "cases": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "a", "b", "preferred", "rationale", "uncertainties"],
+        "properties": {
+          "id": {"type": "string"},
+          "a": {"$ref": "#/$defs/score"},
+          "b": {"$ref": "#/$defs/score"},
+          "preferred": {"type": "string", "enum": ["A", "B", "tie"]},
+          "rationale": {"type": "string"},
+          "uncertainties": {"type": "string"}
+        }
+      }
+    },
+    "cross_case_observations": {"type": "string"}
+  },
+  "$defs": {
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["accuracy", "definition_boundaries", "mental_model_mechanism", "terminology_scaffolding", "relevance_cognitive_load", "transfer_readiness", "total"],
+      "properties": {
+        "accuracy": {"type": "integer", "minimum": 0, "maximum": 4},
+        "definition_boundaries": {"type": "integer", "minimum": 0, "maximum": 4},
+        "mental_model_mechanism": {"type": "integer", "minimum": 0, "maximum": 4},
+        "terminology_scaffolding": {"type": "integer", "minimum": 0, "maximum": 4},
+        "relevance_cognitive_load": {"type": "integer", "minimum": 0, "maximum": 4},
+        "transfer_readiness": {"type": "integer", "minimum": 0, "maximum": 4},
+        "total": {"type": "integer", "minimum": 0, "maximum": 24}
+      }
+    }
+  }
+}

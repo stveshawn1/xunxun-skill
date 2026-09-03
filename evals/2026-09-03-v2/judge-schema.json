@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["replicates", "item_observation"],
+  "properties": {
+    "replicates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["replicate", "a", "b", "preferred", "rationale"],
+        "properties": {
+          "replicate": {"type": "integer", "minimum": 1, "maximum": 3},
+          "a": {"$ref": "#/$defs/score"},
+          "b": {"$ref": "#/$defs/score"},
+          "preferred": {"type": "string", "enum": ["A", "B", "tie"]},
+          "rationale": {"type": "string"}
+        }
+      }
+    },
+    "item_observation": {"type": "string"}
+  },
+  "$defs": {
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["facts", "forbidden", "intuition", "boundary", "mechanism", "novice_relevance"],
+      "properties": {
+        "facts": {"type": "array", "items": {"type": "boolean"}},
+        "forbidden": {"type": "array", "items": {"type": "boolean"}},
+        "intuition": {"type": "integer", "minimum": 0, "maximum": 2},
+        "boundary": {"type": "integer", "minimum": 0, "maximum": 2},
+        "mechanism": {"type": "integer", "minimum": 0, "maximum": 2},
+        "novice_relevance": {"type": "integer", "minimum": 0, "maximum": 2}
+      }
+    }
+  }
+}

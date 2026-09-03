@@ -1,0 +1,131 @@
+{
+  "pilot_ids": [
+    "pi-session-tree",
+    "agents-agent-runner-session",
+    "dsh-service-lifecycle",
+    "immune-memory",
+    "accounting-profit-cash"
+  ],
+  "items": [
+    {
+      "id": "pi-session-tree",
+      "domain": "pi-coding-agent",
+      "source": "pi.md",
+      "prompt": "我在看当前目录的 source.md。JSONL 不就是一行一行往后写吗，Pi 怎么还能在同一个文件里分叉？",
+      "facts": ["physical storage is append-only JSONL", "id/parentId form a logical tree", "new branch entries append rather than erase old lines", "model context follows the selected ancestry and applies compaction"],
+      "forbidden": ["claim that branching rewrites or truncates the JSONL"]
+    },
+    {
+      "id": "pi-turn-step",
+      "domain": "pi-coding-agent",
+      "source": "pi.md",
+      "prompt": "我在看当前目录的 source.md。Turn 和 Step 我老是混：模型先读一次文件、再改一次文件、最后回答，这到底算几个？",
+      "facts": ["one Turn spans user input to final no-tool answer", "each model request/response is a Step", "tool results cause another Step within the same Turn", "parallel calls in one response remain one Step"],
+      "forbidden": ["count every tool call as a separate Turn"]
+    },
+    {
+      "id": "pi-extension-skill-template",
+      "domain": "pi-coding-agent",
+      "source": "pi.md",
+      "prompt": "我在看当前目录的 source.md。Extension、Skill、prompt template 看起来都能扩展 Pi，它们到底是不是一回事？如果我要真正拦住危险命令，该选哪个？",
+      "facts": ["Extension is executable host code", "Skill is model-facing instruction", "prompt template expands user-selected prompt text", "enforcement belongs on the executable tool path, so Extension is appropriate"],
+      "forbidden": ["claim that a Skill enforces the tool boundary equivalently"]
+    },
+    {
+      "id": "agents-agent-runner-session",
+      "domain": "openai-agents-sdk",
+      "source": "openai-agents-sdk.md",
+      "prompt": "我在看当前目录的 source.md。Agent 和 Runner 不都是在跑模型吗？为什么要分成两个，Session 又放在哪一层？",
+      "facts": ["Agent is a reusable behavior/capability definition", "Runner owns the execution loop", "Session persists conversation history across runs", "the three have distinct lifecycles"],
+      "forbidden": ["say that Agent executes itself", "equate Session with tracing"]
+    },
+    {
+      "id": "agents-manager-handoff",
+      "domain": "openai-agents-sdk",
+      "source": "openai-agents-sdk.md",
+      "prompt": "我在看当前目录的 source.md。把专家 Agent 当成 tool，和 handoff 给这个 Agent，本质差在哪？我什么时候容易选错？",
+      "facts": ["manager retains conversation control for agents-as-tools", "manager synthesizes the final answer", "handoff changes the current Agent", "choice depends on whether specialist supplies a result or takes ownership"],
+      "forbidden": ["describe both patterns as equivalent delegation"]
+    },
+    {
+      "id": "agents-guardrail-tracing",
+      "domain": "openai-agents-sdk",
+      "source": "openai-agents-sdk.md",
+      "prompt": "我在看当前目录的 source.md。既然 tracing 已经能看到模型和工具做了什么，为什么还需要 guardrail？",
+      "facts": ["tracing observes and records", "guardrails can block on the execution path", "input/output/tool guardrails have different scopes", "parallel input checks trade lower latency for a speculative execution window"],
+      "forbidden": ["claim that tracing itself blocks execution"]
+    },
+    {
+      "id": "dsh-profile-bundle-patch",
+      "domain": "dsh",
+      "source": "dsh.md",
+      "prompt": "我在看当前目录的 source.md。DSH 里的 Profile、Bundle、Patch 我还是分不清，它们分别是文件、包，还是运行中的对象？",
+      "facts": ["Patch is an incremental entry-list operation/config layer", "Bundle is an npm package whose manifest points to a patch", "Profile is a launchable directory/composition selecting ordered bundles", "runtime plugin instances appear only after composition and loading"],
+      "forbidden": ["reduce Bundle to merely a list of patches", "call Profile a runtime plugin instance"]
+    },
+    {
+      "id": "dsh-service-lifecycle",
+      "domain": "dsh",
+      "source": "dsh.md",
+      "prompt": "我在看当前目录的 source.md。为什么一个类里调用 `super(ctx, 'llm')`，别的插件后面就能写 `ctx.llm`？`inject: ['llm']` 又做了什么？",
+      "facts": ["Service constructor provides the instance under a name", "Context Proxy resolves ctx.llm through the service store", "inject declares an availability dependency rather than constructing the object", "Fiber owns plugin activation and cleanup"],
+      "forbidden": ["say that the string llm is converted into an object", "guarantee unspecified dependent-unload behavior"]
+    },
+    {
+      "id": "dsh-model-visible-log",
+      "domain": "dsh",
+      "source": "dsh.md",
+      "prompt": "我在看当前目录的 source.md。`model-visible means logged` 到底是什么意思？Headless 为什么不能直接打印模型调用刚返回的字符串？",
+      "facts": ["model-visible semantic content must have a Session event", "logged diagnostic events need not be model-visible", "model conversation is a projection of recorded events", "Headless flushes and derives text/end reason from the owned event interval"],
+      "forbidden": ["claim that every logged event is model-visible", "treat a transient model return as authoritative durable final state"]
+    },
+    {
+      "id": "immune-clonal-selection",
+      "domain": "adaptive-immunity",
+      "source": "adaptive-immunity.md",
+      "prompt": "我在看当前目录的 source.md。抗体或者免疫细胞是不是碰到病毒以后，才现场做出一个刚好匹配它的受体？",
+      "facts": ["diverse receptors exist before exposure", "antigen selects a matching pre-existing clone", "selected clones proliferate", "descendants preserve specificity"],
+      "forbidden": ["describe antigen as designing the receptor"]
+    },
+    {
+      "id": "immune-tcell-activation",
+      "domain": "adaptive-immunity",
+      "source": "adaptive-immunity.md",
+      "prompt": "我在看当前目录的 source.md。T 细胞都已经认出抗原了，为什么资料还说它不一定会被激活？",
+      "facts": ["TCR recognizes peptide plus self MHC", "recognition and activation are distinct", "naive T-cell activation generally also needs professional-APC costimulation", "missing costimulation breaks the activation chain"],
+      "forbidden": ["equate binding with full activation"]
+    },
+    {
+      "id": "immune-memory",
+      "domain": "adaptive-immunity",
+      "source": "adaptive-immunity.md",
+      "prompt": "我在看当前目录的 source.md。免疫记忆是不是就是血里一直留着很多上次产生的抗体？",
+      "facts": ["persistent antibody alone is incomplete", "long-lived antigen-specific memory cells remain", "secondary response starts from a larger/more responsive specific population", "memory does not generally accelerate unrelated antigens"],
+      "forbidden": ["describe immune memory as nonspecific", "attribute it solely to circulating antibody"]
+    },
+    {
+      "id": "accounting-debit-credit",
+      "domain": "financial-statements",
+      "source": "financial-statements.md",
+      "prompt": "我在看当前目录的 source.md。会计里的借方是不是增加、贷方是不是减少？为什么不同例子看起来反过来了？",
+      "facts": ["debit and credit mean left and right", "increase direction depends on account type", "assets/expenses usually increase by debit", "liabilities/equity/revenue usually increase by credit", "total debits equal total credits"],
+      "forbidden": ["define debit universally as increase"]
+    },
+    {
+      "id": "accounting-profit-cash",
+      "domain": "financial-statements",
+      "source": "financial-statements.md",
+      "prompt": "我在看当前目录的 source.md。公司明明有利润，为什么还可能发不出工资、现金不够？",
+      "facts": ["accrual profit and cash timing differ", "credit revenue can increase receivables before cash", "collection later converts receivable to cash without new revenue", "cash obligations can precede collection"],
+      "forbidden": ["equate positive profit with positive cash balance"]
+    },
+    {
+      "id": "accounting-machine-purchase",
+      "domain": "financial-statements",
+      "source": "financial-statements.md",
+      "prompt": "我在看当前目录的 source.md。买机器明明当场花了一大笔钱，为什么利润表不在当期把它全部算成费用？",
+      "facts": ["cash decreases while property/equipment increases", "purchase is an investing cash outflow", "multi-period benefit leads to depreciation over periods", "depreciation reduces profit without a new cash payment that period"],
+      "forbidden": ["treat the entire purchase as immediate operating expense"]
+    }
+  ]
+}

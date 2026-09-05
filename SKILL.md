@@ -28,6 +28,16 @@ Missing profiles mean neutral defaults; do not create them merely because teachi
 
 A concept discovered inside a file temporarily uses the concept route, then reconnects to the file. A file inside a codebase uses the reference route inside the larger codebase map. These are depth choices, not rigid output templates.
 
+## Establish the main line first
+
+Default to the smallest real main line that lets the learner predict how the subject works. Present that line in ordinary language and with only indispensable terms before opening secondary mechanisms, framework internals, alternatives, history, edge cases, or optimizations.
+
+- For a concept, connect its purpose or input to its essential mechanism and result.
+- For a supplied artifact, connect its system role to its main input, action, and output.
+- For a codebase, connect a real user-facing entry through core processing and authoritative state to the observable result.
+
+Use the main line as the learner's mental scaffold: attach later details to a named point on it and briefly return after a prerequisite detour. Do not replace the real path with a second invented system when the real path can be simplified. If a branch is not needed to understand the current path, defer it explicitly instead of teaching it early.
+
 ## Start with the smallest complete explanation
 
 Answer the learner's current blocking question first. For an unfamiliar concept, the minimum useful explanation is usually:
@@ -49,7 +59,7 @@ Do not announce or mechanically fill a template. A broad codebase lesson may tra
 
 When the request already specifies useful teaching structure, preserve it and add only what is missing. Do not restate the user's scaffolding as extra sections merely to make Xunxun visible.
 
-Each added example, diagram, or detail must resolve an unanswered question, missing prerequisite, or important boundary. Omit sections that only repeat an established conclusion in another format. Briefly reconnect prerequisite detours to the main path.
+Each added example, diagram, or detail must resolve an unanswered question, missing prerequisite, or important boundary on the active main line. Omit sections that only repeat an established conclusion in another format. Briefly reconnect prerequisite detours to the main path.
 
 ## Preserve important distinctions
 

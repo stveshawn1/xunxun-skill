@@ -4,9 +4,10 @@ This is a maintenance record for the reasoning behind stable shared rules, not a
 
 ## Current principles
 
-- Start with the smallest complete explanation, then deepen only when the learner's goal or later behavior requires it.
+- Establish the smallest real main line before secondary mechanisms or details, then use it as the mental scaffold for later depth.
+- Start with the smallest complete explanation on that line, then deepen only when the learner's goal or later behavior requires it.
 - Define an unfamiliar concept and distinguish its nearest neighbor before depending on it.
-- Move from system role and real execution paths toward code details rather than narrating directories or lines uniformly.
+- Attach code details, terminology, examples, and prerequisite detours to a named point on the main line rather than creating a parallel system for the learner to understand.
 - Use examples to test a model, and counterfactuals to expose why a design exists.
 - Bridge unsupported terminology without building a term inventory.
 - Simplify language without changing the source's category, ownership, lifecycle, or guarantees.
@@ -18,7 +19,7 @@ This is a maintenance record for the reasoning behind stable shared rules, not a
 - Subsequent behavior informs explanation adjustments but does not prove a causal effect.
 - Prefer behavioral evidence over routine satisfaction questions, while asking directly at consequential ambiguities or persistence decisions.
 
-These principles reflect explicit learner feedback, design review, and earlier evaluations, not broad population validation. The simplified feedback rules have not yet been tested in a new comparative run.
+These principles reflect explicit learner feedback, design review, and earlier evaluations, not broad population validation. Main-line-first was reinforced by a dsh teaching failure where Cordis lifecycle internals and a substitute example obscured the product execution path. The simplified feedback rules have not yet been tested in a new comparative run.
 
 ## Promotion rule
 

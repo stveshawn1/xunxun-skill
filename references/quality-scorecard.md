@@ -23,6 +23,7 @@ Run at least these cases:
 15. one independent concept item per fresh Session, plus a separate scripted multi-turn case where accumulation is intentional and matched across conditions.
 16. an explicit request to remember a preference, followed by a conflicting current request; honor both scopes without redundant confirmation.
 17. an objection to an incorrect answer; correct it without inventing a learner preference.
+18. one explanation with tempting framework internals, alternative paths, and edge cases; establish the real main line first and defer branches until they attach to it.
 
 Where independent agents are available and authorized, one agent teaches and another scores from the request, response, relevant evidence, and this rubric.
 
@@ -32,7 +33,7 @@ Where independent agents are available and authorized, one agent teaches and ano
 |---|---:|---|
 | Definition accuracy | 15 | Correct category, boundaries, and nearby distinctions |
 | Preset fit | 5 | Structure matches concept/reference/codebase request |
-| Mental-model coherence | 10 | Details reconnect to a reusable whole |
+| Mental-model coherence | 10 | A real main line appears before branches; later details reconnect to that reusable whole |
 | Vocabulary scaffolding | 10 | Unsupported terms receive proportional bridges; demonstrated terms are not re-taught |
 | Evidence and honesty | 15 | Sources, inference, analogy, and limitations are distinguished |
 | Behavioral inference | 15 | Repetition, progression, transfer, rejection, and ambiguity are distinguished |

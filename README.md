@@ -2,7 +2,7 @@
 
 > Explain, observe, adapt — without turning learning into a survey.
 
-Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases through explicit explanation presets. It observes whether later behavior progresses, repeats, transfers, or rejects the model; then applies a small explanation treatment and updates only local, evidence-supported preferences.
+Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases through explicit explanation presets. It follows explicit explanation requests, repairs misunderstandings from feedback, and preserves a compact learning route and authorized local preferences.
 
 **Status:** public beta. The core teaching flow and explicit/local personalization boundary are usable; current evidence supports modest, context-dependent one-turn improvement rather than universal effectiveness.
 
@@ -13,8 +13,8 @@ Xunxun is an Agent Skill for teaching concepts, supplied files, and codebases th
 - **Codebase preset** — follow entrypoints, natural seams, execution paths, state, and lifecycle before line-level code.
 - **Progressive depth** — start with the smallest complete explanation and add layers only when the learner's goal or later behavior requires them.
 - **Terminology bridging** — add a minimal intuitive gloss when the learner has not demonstrated a required specialized term.
-- **Adaptive learning** — use a contextual-bandit-inspired loop to select scoped treatment deltas, infer fit from ongoing behavior, and update compact private state.
-- **Promotion checkpoints** — when a durable preference is supported, explain the proposed local update and ask whether to retain it.
+- **Adaptive learning** — correct the answer first, then adjust the explanation using relevant feedback without experiment bookkeeping.
+- **Promotion checkpoints** — save explicitly requested preferences; confirm inferred patterns before retaining them globally.
 - **Honest personalization** — no identity inference, telemetry, automatic upload, or claim of cross-device learning.
 
 ## Install
@@ -66,9 +66,11 @@ Use `evals/case-template.md` to run the same prompt in fresh, matched sessions w
 
 The first preregistered five-domain paired evaluation found no material one-turn improvement under highly structured prompts: both blinded judges rated all five pairs as ties, with a mean Xunxun delta of `+0.1/24` and `2.735×` cumulative input-token usage. This negative result, raw outputs, judgments, integrity manifest, and proposed next tests are preserved in [`evals/2026-09-03-v1/report.md`](evals/2026-09-03-v1/report.md).
 
-The corrected v2.3 evaluation used 15 independent natural novice questions, three generations per arm, item-specific fact checks, and three blinded judges. Xunxun was preferred in 19 of 31 non-tied pairs (61.3%), improved mean fact coverage by 3.4 percentage points, and used `1.425×` cumulative input tokens. Gains were strongly context-dependent—especially concentrated in financial statements—so the result supports modest practical value, not universal effectiveness. Full raw evidence and process amendments are in [`evals/2026-09-03-v2/report.md`](evals/2026-09-03-v2/report.md).
+The corrected v2.3 evaluation used 15 independent natural novice questions, three generations per arm, item-specific fact checks, and three blinded judges. Xunxun was preferred in 19 of 31 non-tied pairs (61.3%), improved a combined factual score by 0.034, and used `1.425×` cumulative input tokens. Gains were strongly context-dependent—especially concentrated in financial statements—so the result supports modest practical value, not universal effectiveness. Full raw evidence and process amendments are in [`evals/2026-09-03-v2/report.md`](evals/2026-09-03-v2/report.md).
 
 For a faster, concrete view, read [`examples/reviewed-evidence-v2.md`](examples/reviewed-evidence-v2.md): four positive pairs across DSH, OpenAI Agents SDK, and accounting, followed by a DSH counterexample where Xunxun added cognitive cost without adding facts. The page is curated for explanation; the full evaluation remains the source of record.
+
+The v2.3 score is `(required facts covered − forbidden inferences) / required facts`, not pure fact coverage. Historical report labels are inaccurate; raw results and the original report remain frozen for audit. These results evaluate the earlier Skill at `d49f0e9`, not the current simplified feedback rules. To verify the original evidence, check out `7a2f074` in a separate checkout and run `python3 evals/2026-09-03-v2/verify.py` there; its manifest includes the then-current `SKILL.md`.
 
 ## Design boundary
 

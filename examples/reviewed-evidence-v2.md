@@ -8,6 +8,8 @@ Each pair used the same natural novice question, source snapshot, model settings
 
 The four positive examples below were selected after aggregate analysis for clarity and domain variety; the selection itself is not the basis of the aggregate result. The counterexample is included because the same treatment can also add unnecessary explanation. Excerpts are faithful English translations with surrounding text omitted; follow the links for the complete, unedited Chinese outputs and judgments.
 
+Metric correction: the historical analysis subtracts forbidden inferences from covered facts, then divides by required facts. The figures below are combined factual-score changes, not pure coverage gains. These examples concern the earlier Skill at `d49f0e9`; the simplified feedback rules have not been evaluated by this suite.
+
 ## Overall signal
 
 | Measure | v2.3 result |
@@ -16,7 +18,7 @@ The four positive examples below were selected after aggregate analysis for clar
 | Paired comparisons | 45 |
 | Xunxun / Baseline / tie | 19 / 12 / 14 |
 | Xunxun share among non-ties | 61.3% |
-| Mean required-fact coverage delta | +3.4 percentage points |
+| Mean combined factual-score delta | +0.034 |
 | Final-answer character ratio | 1.093× |
 | Cumulative input-token ratio | 1.425× |
 
@@ -36,7 +38,7 @@ Xunxun kept the three mechanisms separate and stopped at the supported boundary:
 > `ctx.llm`: query and obtain the registered service instance  
 > `inject: ['llm']`: declare that the current plugin depends on `llm`
 
-All three judges preferred Xunxun in this replicate. Across the three replicates, Xunxun won all three majority decisions; item-level fact coverage improved by 19.4 percentage points while the answers were shorter overall.
+All three judges preferred Xunxun in this replicate. Across the three replicates, Xunxun won all three majority decisions; item-level combined factual score improved by 0.194 while the answers were shorter overall.
 
 [Baseline output](../evals/2026-09-03-v2/results/dsh-service-lifecycle/baseline/r1.md) · [Xunxun output](../evals/2026-09-03-v2/results/dsh-service-lifecycle/xunxun/r1.md) · Judgments: [Sol](../evals/2026-09-03-v2/judgments/sol/dsh-service-lifecycle.json), [Terra](../evals/2026-09-03-v2/judgments/terra/dsh-service-lifecycle.json), [GPT-5.5](../evals/2026-09-03-v2/judgments/gpt55/dsh-service-lifecycle.json)
 
@@ -77,7 +79,7 @@ It then named the reusable mechanism:
 
 > There are three key timing mismatches: revenue versus collection, expenditure versus expense, and profit versus ability to pay.
 
-All three judges preferred Xunxun in this replicate. Xunxun won all three item-level majority decisions, with fact coverage improving by 8.3 percentage points.
+All three judges preferred Xunxun in this replicate. Xunxun won all three item-level majority decisions, with combined factual score improving by 0.083.
 
 [Baseline output](../evals/2026-09-03-v2/results/accounting-profit-cash/baseline/r1.md) · [Xunxun output](../evals/2026-09-03-v2/results/accounting-profit-cash/xunxun/r1.md) · Judgments: [Sol](../evals/2026-09-03-v2/judgments/sol/accounting-profit-cash.json), [Terra](../evals/2026-09-03-v2/judgments/terra/accounting-profit-cash.json), [GPT-5.5](../evals/2026-09-03-v2/judgments/gpt55/accounting-profit-cash.json)
 
@@ -99,7 +101,7 @@ It also organized the distinction by the question each statement answers:
 | Balance sheet | What does the company still own? | A machine asset appears |
 | Income statement | How much resource was consumed this period? | Only this period's depreciation |
 
-All three judges preferred Xunxun in this replicate. Xunxun won all three item-level majority decisions, with fact coverage improving by 11.1 percentage points.
+All three judges preferred Xunxun in this replicate. Xunxun won all three item-level majority decisions, with combined factual score improving by 0.111.
 
 [Baseline output](../evals/2026-09-03-v2/results/accounting-machine-purchase/baseline/r3.md) · [Xunxun output](../evals/2026-09-03-v2/results/accounting-machine-purchase/xunxun/r3.md) · Judgments: [Sol](../evals/2026-09-03-v2/judgments/sol/accounting-machine-purchase.json), [Terra](../evals/2026-09-03-v2/judgments/terra/accounting-machine-purchase.json), [GPT-5.5](../evals/2026-09-03-v2/judgments/gpt55/accounting-machine-purchase.json)
 

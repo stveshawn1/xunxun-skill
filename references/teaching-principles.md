@@ -12,10 +12,13 @@ This is a maintenance record for the reasoning behind stable shared rules, not a
 - Simplify language without changing the source's category, ownership, lifecycle, or guarantees.
 - Use Xunxun as a teaching layer over authoritative domain evidence rather than displacing source-specialist workflows.
 - When the request already supplies a strong teaching structure, add only missing value.
-- Treat explanation changes as scoped hypotheses; subsequent behavior informs them but does not prove a causal effect.
+- Correct wrong or incomplete answers before inferring a teaching preference.
+- Follow explicit requests and remember preferences within authorized scope; inferred preferences remain tentative until supported and accepted.
+- Add explanation layers only when they resolve an unanswered question; reconnect prerequisite detours to the main route.
+- Subsequent behavior informs explanation adjustments but does not prove a causal effect.
 - Prefer behavioral evidence over routine satisfaction questions, while asking directly at consequential ambiguities or persistence decisions.
 
-These principles currently reflect explicit learner feedback, design review, and the negative/ambiguous v1 evaluation, not broad population validation.
+These principles reflect explicit learner feedback, design review, and earlier evaluations, not broad population validation. The simplified feedback rules have not yet been tested in a new comparative run.
 
 ## Promotion rule
 

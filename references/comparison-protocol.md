@@ -37,7 +37,7 @@ Use separate fresh sessions so one run cannot learn from the other. If model or 
 draft → baseline run → treatment run → human review → accepted/rejected → optional public demo
 ```
 
-Store the raw comparison in `evals/`. Do not edit weak outputs to make either side look better.
+Store each new experiment in a separate directory under `evals/`; do not reuse old outputs after changing the model, prompts, sources, or Skill. Do not edit weak outputs to make either side look better.
 
 ## Human review
 
@@ -54,7 +54,7 @@ Define the learning objective and rubric before revealing which output used Xunx
 
 Record concrete evidence, not only “A feels better.” One pair is illustrative. Repeat important cases or vary the topic before generalizing.
 
-Score each independent question against a question-specific factual checklist before applying general teaching-quality dimensions. Include a transfer or misconception check when the claimed outcome is learner understanding, not merely polished prose. Treat saturated scores as a failed measurement design, not proof that both conditions are perfect.
+Report required-fact coverage and unsupported inferences separately. If using a combined score, disclose its formula and label it as combined, not as coverage. Score each independent question against a question-specific factual checklist before applying general teaching-quality dimensions. Include a transfer or misconception check when the claimed outcome is learner understanding, not merely polished prose. Treat saturated scores as a failed measurement design, not proof that both conditions are perfect.
 
 ## Public demo promotion
 

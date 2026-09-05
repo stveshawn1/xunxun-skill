@@ -11,8 +11,6 @@
 ## Contextual preferences
 - None recorded.
 
-## Contradicted or superseded
-- None recorded.
 ```
 
 ## Project `.xunxun/profile.md`
@@ -32,8 +30,7 @@
 ## Open gaps
 - None recorded.
 
-## Active adaptations
-- None recorded.
 ```
 
 Keep both files compact. Do not add raw transcripts, a vocabulary inventory, or a chronological event log.
+Add a scoped adaptation only when needed to resume. Replace outdated or rejected preferences rather than maintaining a history of states.

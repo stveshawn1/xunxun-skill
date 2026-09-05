@@ -33,7 +33,7 @@ Do not search unrelated parent directories or a central project index. Locality 
 
 ## Opt in and protect project state
 
-Do not create a project profile during an ordinary explanation. Ask before first creation. Once the learner opts in and the file exists, compact milestone updates may continue during later lessons unless the learner withdraws that permission.
+Do not create a project profile during an ordinary explanation. Obtain opt-in before first creation; an explicit request to save project learning progress is sufficient. Once the learner opts in and the file exists, compact milestone updates may continue during later lessons unless the learner withdraws that permission.
 
 Before any project-profile write in a Git repository:
 
@@ -65,13 +65,15 @@ current Session evidence
 
 The narrower layer wins only where it contains relevant evidence. An unfamiliar overloaded term remains unfamiliar merely because a similarly named concept appeared in another project.
 
+The learner's current explicit request overrides stored preferences. Replace or remove rejected preferences. When resuming a project lesson, check that the next referenced file and essential context still apply; a changed revision is a reason to inspect relevant changes, not to invalidate all progress.
+
 ## Persistence
 
 At a natural milestone:
 
 - keep short-lived observations in the Session;
 - update an opted-in project profile when route, established understanding, open gaps, or a project-only adaptation must survive another Session;
-- use a promotion checkpoint before adding a consequential cross-project preference to the global profile;
+- save a cross-project preference when explicitly asked, or confirm an inferred pattern before retaining it;
 - replace or consolidate old conclusions instead of appending a chronological diary.
 
 There is no automatic Session-end hook. Cross-Session continuity comes from loading a compact project profile, not replaying the prior conversation.

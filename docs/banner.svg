@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">循循 Xunxun</title>
+  <desc id="desc">AI 讲了很多，你还是没懂？从卡住的地方开始，沿着主线讲明白。</desc>
+  <rect width="1280" height="420" rx="24" fill="#f4f0e7"/>
+  <path d="M925 60v100h140v105h130" fill="none" stroke="#c8d3be" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="925" cy="60" r="17" fill="#365849"/>
+  <circle cx="1195" cy="265" r="17" fill="#365849"/>
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="64" y="72" font-size="22" letter-spacing="3" fill="#365849">循循 / XUNXUN</text>
+    <text x="64" y="170" font-size="58" font-weight="700" fill="#202c26">AI 讲了很多，</text>
+    <text x="64" y="244" font-size="58" font-weight="700" fill="#202c26">你还是没懂？</text>
+    <text x="64" y="311" font-size="27" fill="#526257">从卡住的地方开始，沿着主线讲明白。</text>
+    <text x="64" y="374" font-size="18" fill="#526257">概念讲解 · 文件解读 · 代码库带读</text>
+    <text x="1060" y="374" font-size="16" fill="#526257">PUBLIC BETA</text>
+  </g>
+</svg>

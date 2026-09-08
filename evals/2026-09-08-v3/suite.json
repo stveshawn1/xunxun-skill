@@ -1,0 +1,34 @@
+[
+  {
+    "id": "type-erasure",
+    "prompt": "I have only used a little Python. If TypeScript removes the types, can a string still end up in a number variable?",
+    "source": "TypeScript checks types before execution and erases type annotations. JavaScript executes the resulting program. Unvalidated external data, any, or type assertions can bypass static assurance. A type assertion does not validate or convert its value. For external data intended to be a finite number, a runtime check can test typeof value === 'number' and Number.isFinite(value).",
+    "facts": ["Types are erased before ordinary JavaScript execution.", "External data or bypasses can violate the declared type.", "Runtime validation is separate from an annotation or assertion."],
+    "forbidden": ["Claims TypeScript guarantees all runtime input types.", "Claims an assertion converts or validates the value."],
+    "teaching": "Answer the apparent contradiction with a concrete handle without a compiler architecture lecture."
+  },
+  {
+    "id": "config-runtime",
+    "prompt": "这个配置里的 retry: 3 是会创建三个任务吗？",
+    "source": "Synthetic fixture, not a real library. config.yaml: retry: 3\nloader.py: cfg = yaml.safe_load(text); worker = Worker(max_retries=cfg['retry'])\nWorker.run(job): makes one initial attempt; on failure, retries sequentially up to max_retries times, stopping on success; no parallel tasks are created. The constructor stores max_retries and does not start execution.",
+    "facts": ["The YAML value is parsed and passed into the constructor.", "One Worker instance stores a retry limit; the constructor does not start jobs.", "At most four sequential attempts including the first, stopping on success."],
+    "forbidden": ["Claims three workers or parallel jobs are created.", "Claims exactly three total attempts."],
+    "teaching": "Resolve the object-count versus retry-count misconception in Chinese; connect the setting to the actual consumer."
+  },
+  {
+    "id": "return-to-code",
+    "prompt": "Conversation so far: I asked to understand this program. The tutor explained registration, but I got stuck on what a dictionary is. We discussed dictionaries, and I now understand key-value lookup. My next message: Okay, back to the code. How does search get that object?",
+    "source": "Synthetic Python fixture.\nservices = {}\nclass Search:\n    def query(self, text): return text.upper()\nservices['search'] = Search()\ndef handle(text):\n    search = services['search']\n    return search.query(text)\nprint(handle('hello'))",
+    "facts": ["Search() creates the instance and stores it under the search key.", "handle retrieves the same stored object rather than creating another.", "query produces HELLO for the given input."],
+    "forbidden": ["Claims the string search itself becomes an object.", "Invents dependency injection framework behavior absent from the code."],
+    "teaching": "Reconnect the newly understood dictionary lookup to the paused execution path, without repeating the dictionary lesson."
+  },
+  {
+    "id": "resume-project",
+    "prompt": "继续上次的代码学习。这次我只有几分钟，直接接着看下一步。",
+    "source": "Shared supplied learning context, identical for every arm; no real personal profile is used. General preference: detailed explanations. Project note at old revision: learned the request route and input validation; next read save_order in storage.py. Current synthetic repository: storage.py has been removed; app.py calls validate(payload), then repository.save_order(order), then format_reply(order_id). repository.py saves order in a dictionary and returns its integer id. The dictionary exists only in memory. Current request asks to continue briefly.",
+    "facts": ["Resume at repository.save_order after validation rather than restarting the lesson.", "Use the current repository.py path, acknowledging the stale path if useful.", "Explain save returns an integer id then format_reply uses it.", "State storage is in-memory, not durable."],
+    "forbidden": ["Says storage.py still exists or claims to have opened it.", "Lets the general detailed preference override the current brief request.", "Claims a profile was saved or edited."],
+    "teaching": "Brief Chinese continuation that reconciles supplied progress with changed code and respects the current time constraint."
+  }
+]

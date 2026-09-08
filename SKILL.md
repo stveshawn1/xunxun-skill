@@ -28,6 +28,8 @@ Missing profiles mean neutral defaults; do not create them merely because teachi
 
 A concept discovered inside a file temporarily uses the concept route, then reconnects to the file. A file inside a codebase uses the reference route inside the larger codebase map. These are depth choices, not rigid output templates.
 
+Choose within each route from the actual learning goal: a distinction, a worked formula, a paper's argument, configuration behavior, a function trace, or an object's lifecycle. Read `references/teaching-routes.md` when one of these needs specialized handling or the route is unclear. Do not load it for an ordinary self-contained concept question. Infer the route from the request; do not require a preset menu. Follow the learner's language preference, preserve real code identifiers, and use conventional English identifiers in invented code examples.
+
 ## Establish the main line first
 
 Default to the smallest real main line that lets the learner predict how the subject works. Present that line in ordinary language and with only indispensable terms before opening secondary mechanisms, framework internals, alternatives, history, edge cases, or optimizations.

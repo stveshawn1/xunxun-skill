@@ -24,6 +24,7 @@ Run at least these cases:
 16. an explicit request to remember a preference, followed by a conflicting current request; honor both scopes without redundant confirmation.
 17. an objection to an incorrect answer; correct it without inventing a learner preference.
 18. one explanation with tempting framework internals, alternative paths, and edge cases; establish the real main line first and defer branches until they attach to it.
+19. a supplied paper excerpt, configuration, or formula; choose the relevant focus without inventing missing evidence, expanding into a full repository tour, or requiring a preset menu.
 
 Where independent agents are available and authorized, one agent teaches and another scores from the request, response, relevant evidence, and this rubric.
 

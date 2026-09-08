@@ -55,7 +55,7 @@ Skill 是供 AI 读取的一套工作指引。循循需要搭配支持 Skills、
 **不熟悉终端？** 在你正在用、支持安装 Skills 的 AI 工具里发送：
 
 ```text
-帮我安装这个 Skill：
+Install this skill:
 https://github.com/stveshawn1/xunxun-skill
 ```
 
@@ -103,15 +103,16 @@ npx skills update xunxun -g
 安装完成后，在能加载已安装 Skills 的新会话里发：
 
 ```text
-用 xunxun 解释一下 TypeScript 的类型擦除。
-我只写过一点 Python。
+Use xunxun to explain TypeScript type erasure.
+I have only written a little Python. Explain in Chinese.
 ```
 
 想读代码，就先打开项目再发：
 
 ```text
-用 xunxun 带我读这个代码库。
-先从一次真实用户请求的入口，讲到最终结果。
+Use xunxun to walk me through this codebase.
+Trace one real user request from its entry point to the final output.
+Explain in Chinese.
 ```
 
 ### 3. 直接说你卡在哪里
@@ -119,23 +120,39 @@ npx skills update xunxun -g
 不需要学一套反馈口令。正常追问即可：
 
 ```text
-我还是不懂，类型删掉之后，谁来检查输入？
+If the types are erased, what checks the input at runtime?
 ```
 
 循循的规则要求它沿着这个疑问继续解释，而不是把之前的全文再说一遍。效果会受模型、资料质量和问题本身影响。
 
 ## 试着这样问
 
-以下是用法示例，不是测试结果。
+以下是用法示例，不是测试结果。提示用英文便于复制和分享；你也可以直接用中文提问，循循按你的语言要求讲解。
 
 | 想做什么 | 复制这句话，再补上你的材料 |
 |---|---|
-| 学一个概念 | 用 xunxun 解释这个概念。我目前知道…… |
-| 读一个文件 | 用 xunxun 带我读这个文件，先讲它在整个系统里负责什么。 |
-| 学习项目主线 | 用 xunxun 带我从入口走一遍主链路，关键代码再逐行看。 |
-| 换一种讲法 | 这个例子我跟不上，先用真实代码里最短的一条路径讲。 |
-| 保存讲解偏好 | 记住：讲陌生概念时，先给定义，再给一个简单例子。 |
-| 下次接着学 | 把这次学到哪里、还卡在哪里和下一步，保存在这个项目的本地学习记录里。 |
+| 学一个概念 | Use xunxun to explain this concept. I already know… |
+| 读一个文件 | Use xunxun to explain this file's role before walking through its contents. |
+| 学习项目主线 | Use xunxun to trace the main execution path, then unpack the critical code. |
+| 换一种讲法 | I cannot follow this example. Trace the shortest real path in the code instead. |
+| 保存讲解偏好 | Remember: define unfamiliar concepts before giving a simple example. |
+| 下次接着学 | Save our learning position, open questions, and next step locally in this project. |
+
+### Preset：同样是讲解，从哪里开始？
+
+Preset 是按材料和问题选用的讲解路线。循循会自行选择，你不需要记住模式名称。
+
+| 场景 | 从哪里讲起 | 试用提示 |
+|---|---|---|
+| 两个概念总混淆 | 用同一例子比较它们，指出何时会产生不同结果 | Use xunxun to explain how concurrency differs from parallelism. |
+| 公式看不懂 | 先讲计算什么，解释符号，再代入一组小数字 | Use xunxun to explain this formula with one numerical example. |
+| 读论文或技术文章 | 研究问题、方法、证据；区分作者结论与自己的推断 | Use xunxun to walk me through this paper's central argument. |
+| 看配置文件 | 配置由谁读取，如何改变运行行为，哪些值来自默认设置 | Use xunxun to explain what this configuration changes at runtime. |
+| 读函数或模块 | 输入、输出、调用者、状态变化，然后看关键代码 | Use xunxun to trace one input through this function. |
+| 理解对象生命周期 | 谁创建、谁持有、何时使用、怎样结束 | Use xunxun to explain who creates and disposes of this service. |
+| 从头学一个仓库 | 真实入口到结果，逐段接上模块和关键对象 | Use xunxun to guide me through this repository from its main entry point. |
+
+这些场景复用概念、材料、代码库三种路线；每次只展开当前需要的部分。[查看具体选择规则](references/teaching-routes.md)。
 
 正常讨论方案、评审代码、要求修改程序时，循循不应自动介入教学。
 
@@ -146,7 +163,7 @@ npx skills update xunxun -g
 | 位置 | 保存内容 |
 |---|---|
 | `~/.xunxun/profile.md` | 你要求或同意保留的跨项目讲解偏好 |
-| `<项目>/.xunxun/profile.md` | 本项目的学习位置、未解决问题、下一步 |
+| `<project-root>/.xunxun/profile.md` | 本项目的学习位置、未解决问题、下一步 |
 | 当前对话 | 临时疑问、尝试的讲法和即时反馈 |
 
 这些是本地 Markdown 文件。循循要求 Agent 防止项目私有记录被 Git 提交，不自动上传或跨设备同步。普通会话仍由你使用的 AI 工具处理；本地记录也需要被该工具读取，不能理解成模型调用完全离线。
@@ -175,7 +192,7 @@ npx skills update xunxun -g
 历史报告中的“事实覆盖率”实际计算为：
 
 ```text
-（覆盖的必需事实数 − 越界推断数）÷ 必需事实总数
+(covered_required_facts - forbidden_inferences) / total_required_facts
 ```
 
 因此 `+0.034` 是综合分数变化，不能解释成事实覆盖率提高 3.4%。原始回答和报告保持冻结，精选案例已说明这一修正。

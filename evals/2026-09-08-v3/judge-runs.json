@@ -1,0 +1,370 @@
+[
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "b1e15c84ce495bd5e5dabab60ad773836f586f217a1639214068aa46bdd798c1",
+    "answer_sha256": "55d5b0de2f27548afbd2d4102d2f2c805d9697b353c2cc06e26ede775efdefa1",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 16413,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 350,
+      "reasoning_output_tokens": 216
+    },
+    "case": "type-erasure",
+    "replicate": 1,
+    "labels": {
+      "A": "baseline",
+      "B": "xunxun",
+      "C": "short"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "1a3eec31fcfb84f1ad3a3b488954cf766dfdd6214c5c4880476626a844f0094c",
+    "answer_sha256": "d806660b20952db91fe50d407fd1b75d3136617b37b1f6e1c1795be21d43677c",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 15452,
+      "cached_input_tokens": 4480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 677,
+      "reasoning_output_tokens": 516
+    },
+    "case": "type-erasure",
+    "replicate": 1,
+    "labels": {
+      "A": "baseline",
+      "B": "short",
+      "C": "xunxun"
+    }
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "b855f9d9702f1bb963b74d6656bee24084dc95ad9ad09e6458300bd61aec12f9",
+    "answer_sha256": "6206a9d6a93b04b8af821daa4cb09650f06fca0aa7248c03ae319c9ee4fb9448",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 16420,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 385,
+      "reasoning_output_tokens": 255
+    },
+    "case": "type-erasure",
+    "replicate": 2,
+    "labels": {
+      "A": "xunxun",
+      "B": "baseline",
+      "C": "short"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "eb76cb05bb73f1ed7bb2ffce458878d7551484a8d254d4778c230dff0143ee32",
+    "answer_sha256": "f3a0ddc25b1eebdcf2036808b4eb7923bcde09fb2f2155dbbaa1039095615eca",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 15461,
+      "cached_input_tokens": 4480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 664,
+      "reasoning_output_tokens": 516
+    },
+    "case": "type-erasure",
+    "replicate": 2,
+    "labels": {
+      "A": "short",
+      "B": "baseline",
+      "C": "xunxun"
+    }
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "a262141fa1c4ae1bce18ffae4c7d734e7624f6b1fc8749abf1bf365fb0aa1b07",
+    "answer_sha256": "c59646175a7eae0079be8214f3e1aabd44026e64f20df774e998251cde5d02fe",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 17023,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 337,
+      "reasoning_output_tokens": 197
+    },
+    "case": "config-runtime",
+    "replicate": 1,
+    "labels": {
+      "A": "xunxun",
+      "B": "baseline",
+      "C": "short"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "300e5d773198def18285c71d5f3aaa99135e62e7334e070021dedb96caf7e962",
+    "answer_sha256": "6ba76bcdf3fd703026282685993189860d0ddb6a6c4d1d6683dd1a4056fe8413",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 16062,
+      "cached_input_tokens": 4480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 662,
+      "reasoning_output_tokens": 516
+    },
+    "case": "config-runtime",
+    "replicate": 1,
+    "labels": {
+      "A": "baseline",
+      "B": "xunxun",
+      "C": "short"
+    }
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "f9c39360aeb4047938ebc559c9a6d6058333f525840699e97966d957f0daf82e",
+    "answer_sha256": "a32cf177541a07a7aadeada5dff52c904dc3bdb05c60103be12b1133e0078f15",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 17036,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 311,
+      "reasoning_output_tokens": 177
+    },
+    "case": "config-runtime",
+    "replicate": 2,
+    "labels": {
+      "A": "short",
+      "B": "baseline",
+      "C": "xunxun"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "b6f427e0a8e1cc9974be9a06082626ceba75eab02a03cbb453a3d61a30b55af6",
+    "answer_sha256": "5b16576ecadd87bee7c8ec0faf5aa144a1d0219b42462967fa3b0cf130065737",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 16073,
+      "cached_input_tokens": 12672,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 645,
+      "reasoning_output_tokens": 509
+    },
+    "case": "config-runtime",
+    "replicate": 2,
+    "labels": {
+      "A": "xunxun",
+      "B": "short",
+      "C": "baseline"
+    }
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "be2c98f50259f4ff9ca3c84b136cdb70798da7f41883751adf83958bd235f160",
+    "answer_sha256": "ec4cd7b546a56c6bf2cd7067b9537e2430ad8f7569a386f6ac92c402390c6795",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 16575,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 254,
+      "reasoning_output_tokens": 118
+    },
+    "case": "return-to-code",
+    "replicate": 1,
+    "labels": {
+      "A": "xunxun",
+      "B": "short",
+      "C": "baseline"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "992fd85ef2cdaf1657871f93e53ce74771c55677c292105aa08f0d94c4e4a49e",
+    "answer_sha256": "13e65ca7d77f6bc24505e4de30467f5afe0701fec773cb7183663cc6e05fd331",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 15616,
+      "cached_input_tokens": 4480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 494,
+      "reasoning_output_tokens": 355
+    },
+    "case": "return-to-code",
+    "replicate": 1,
+    "labels": {
+      "A": "xunxun",
+      "B": "baseline",
+      "C": "short"
+    }
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "4cc52572672134f95464c196d8522f23fe86a1256871ceca62e786cb29a31b47",
+    "answer_sha256": "554a9976f5154a5c892c90a37f5fcc4a854ae24a713836018cc1e21d2512e15f",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 16656,
+      "cached_input_tokens": 13056,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 285,
+      "reasoning_output_tokens": 136
+    },
+    "case": "return-to-code",
+    "replicate": 2,
+    "labels": {
+      "A": "baseline",
+      "B": "short",
+      "C": "xunxun"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "4cc52572672134f95464c196d8522f23fe86a1256871ceca62e786cb29a31b47",
+    "answer_sha256": "552182594a0041895c7a562c75ae30780a3cd66ce2a35833a811c27114f02f23",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 15695,
+      "cached_input_tokens": 4480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 474,
+      "reasoning_output_tokens": 331
+    },
+    "case": "return-to-code",
+    "replicate": 2,
+    "labels": {
+      "A": "baseline",
+      "B": "short",
+      "C": "xunxun"
+    }
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "c1687070ec36e734686be89e781f4214dc262350a840665ccbd9e638223d9fca",
+    "answer_sha256": "4d5c242e739a95f9accdb2e338ff5f396e99784d8ef3be4ad92d6574bce75de0",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 18534,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 294,
+      "reasoning_output_tokens": 156
+    },
+    "case": "resume-project",
+    "replicate": 1,
+    "labels": {
+      "A": "short",
+      "B": "xunxun",
+      "C": "baseline"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "17100f0e39e998d7aab73613610927c8dae899b20a6d694533200a0657f702d7",
+    "answer_sha256": "b6de6638a2a7a643e04fe9daafe5277b5e0d7929657552922ae0ade33f72ec29",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 17575,
+      "cached_input_tokens": 12672,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 686,
+      "reasoning_output_tokens": 516
+    },
+    "case": "resume-project",
+    "replicate": 1,
+    "labels": {
+      "A": "xunxun",
+      "B": "short",
+      "C": "baseline"
+    }
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "prompt_sha256": "8fd0724031b9db6b69de3bcd3b6cda3ee7ad7116141f80c90707c0623356ef17",
+    "answer_sha256": "7567e88ac039099ad64289502385fe7502c0febbec6cba74fe9f5fafe2ef853c",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 18364,
+      "cached_input_tokens": 10624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 351,
+      "reasoning_output_tokens": 206
+    },
+    "case": "resume-project",
+    "replicate": 2,
+    "labels": {
+      "A": "baseline",
+      "B": "short",
+      "C": "xunxun"
+    }
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "high",
+    "prompt_sha256": "a37ec93a954467c71867da441877baebe03f597e44ccf47f69d7afbc8ef5d7a2",
+    "answer_sha256": "b67b0d7b297d85726f52ccc8801403c962dc1d2011dc67ececc56b7b566895fe",
+    "valid": true,
+    "returncode": 0,
+    "unexpected_items": [],
+    "usage": {
+      "input_tokens": 17407,
+      "cached_input_tokens": 12672,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 671,
+      "reasoning_output_tokens": 516
+    },
+    "case": "resume-project",
+    "replicate": 2,
+    "labels": {
+      "A": "xunxun",
+      "B": "baseline",
+      "C": "short"
+    }
+  }
+]

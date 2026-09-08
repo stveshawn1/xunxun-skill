@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">Xunxun</title>
+  <desc id="desc">Lots of explanation. Still lost? Start where you got stuck. Follow the idea through.</desc>
+  <rect width="1280" height="420" rx="24" fill="#f4f0e7"/>
+  <path d="M1030 60v100h80v105h85" fill="none" stroke="#c8d3be" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1030" cy="60" r="17" fill="#365849"/>
+  <circle cx="1195" cy="265" r="17" fill="#365849"/>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="64" y="72" font-size="22" letter-spacing="3" fill="#365849">XUNXUN</text>
+    <text x="64" y="170" font-size="58" font-weight="700" fill="#202c26">Lots of explanation.</text>
+    <text x="64" y="244" font-size="58" font-weight="700" fill="#202c26">Still lost?</text>
+    <text x="64" y="311" font-size="27" fill="#526257">Start where you got stuck. Follow the idea through.</text>
+    <text x="64" y="374" font-size="18" fill="#526257">Concepts · Documents · Code walkthroughs</text>
+    <text x="1060" y="374" font-size="16" fill="#526257">PUBLIC BETA</text>
+  </g>
+</svg>

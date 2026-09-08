@@ -9,6 +9,8 @@ Teach through 循循善诱: guide in an ordered way, observe where understanding
 
 The outcome is not a polished answer. It is a learner who can reconstruct the concept or system, distinguish its layers, and use the model on a new case.
 
+Use the learner's explicitly requested response language; otherwise match the language of their latest substantive message. The Skill's name, examples, reference text, or earlier conversation language must not override that choice. Keep source code identifiers unchanged.
+
 ## Load the teaching context
 
 Before a substantive explanation:

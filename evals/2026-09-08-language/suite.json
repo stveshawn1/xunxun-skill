@@ -1,0 +1,47 @@
+[
+  {
+    "id": "english",
+    "prompt": "Conversation so far: I asked to understand this program. The tutor explained registration, but I got stuck on what a dictionary is. We discussed dictionaries, and I now understand key-value lookup. My next message: Okay, back to the code. How does search get that object?",
+    "source": "Synthetic Python fixture.\nservices = {}\nclass Search:\n    def query(self, text): return text.upper()\nservices['search'] = Search()\ndef handle(text):\n    search = services['search']\n    return search.query(text)\nprint(handle('hello'))",
+    "facts": [
+      "Search() creates the instance and stores it under the search key.",
+      "handle retrieves the same stored object rather than creating another.",
+      "query produces HELLO for the given input."
+    ],
+    "forbidden": [
+      "Claims the string search itself becomes an object.",
+      "Invents dependency injection framework behavior absent from the code."
+    ],
+    "teaching": "Reconnect the newly understood dictionary lookup to the paused execution path, without repeating the dictionary lesson."
+  },
+  {
+    "id": "explicit-chinese",
+    "prompt": "Conversation so far: I asked to understand this program. The tutor explained registration, but I got stuck on what a dictionary is. We discussed dictionaries, and I now understand key-value lookup. My next message: Okay, back to the code. How does search get that object? Please reply in Chinese.",
+    "source": "Synthetic Python fixture.\nservices = {}\nclass Search:\n    def query(self, text): return text.upper()\nservices['search'] = Search()\ndef handle(text):\n    search = services['search']\n    return search.query(text)\nprint(handle('hello'))",
+    "facts": [
+      "Search() creates the instance and stores it under the search key.",
+      "handle retrieves the same stored object rather than creating another.",
+      "query produces HELLO for the given input."
+    ],
+    "forbidden": [
+      "Claims the string search itself becomes an object.",
+      "Invents dependency injection framework behavior absent from the code."
+    ],
+    "teaching": "Reconnect the newly understood dictionary lookup to the paused execution path, without repeating the dictionary lesson."
+  },
+  {
+    "id": "chinese",
+    "prompt": "上次我们看代码时绕去解释了字典。我现在懂键值查找了，继续看：search 是怎么拿到那个对象的？",
+    "source": "Synthetic Python fixture.\nservices = {}\nclass Search:\n    def query(self, text): return text.upper()\nservices['search'] = Search()\ndef handle(text):\n    search = services['search']\n    return search.query(text)\nprint(handle('hello'))",
+    "facts": [
+      "Search() creates the instance and stores it under the search key.",
+      "handle retrieves the same stored object rather than creating another.",
+      "query produces HELLO for the given input."
+    ],
+    "forbidden": [
+      "Claims the string search itself becomes an object.",
+      "Invents dependency injection framework behavior absent from the code."
+    ],
+    "teaching": "Reconnect the newly understood dictionary lookup to the paused execution path, without repeating the dictionary lesson."
+  }
+]

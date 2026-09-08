@@ -72,8 +72,9 @@ The Baseline answer listed several common causes and supplied a short example. X
 
 > The company completes a project and recognizes 1 million in revenue, but the customer pays next month—profit increases by 1 million, cash does not increase, and accounts receivable increases by 1 million.  
 > ...  
-> Monthly profit = 100 − 30 − 20 − 2 = 480,000  
-> Ending cash = 40 − 20 − 15 = 50,000
+> Monthly profit = 1,000,000 − 300,000 − 200,000 − 20,000 = 480,000
+>
+> Ending cash = 400,000 − 200,000 − 150,000 = 50,000
 
 It then named the reusable mechanism:
 
